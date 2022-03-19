@@ -24,7 +24,6 @@ mongoose.connect(MONGO_URI , {
     .catch(err => console.log(err))
 
 
-
-app.listen(4000, function() {
-    console.log('listening on 4000')
+app.listen(5000, function() {
+    console.log('listening on 5000')
   })
