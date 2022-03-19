@@ -7,7 +7,8 @@ const dataModel = require('./schema')
 router.get('/data', async (req, res) => {
     try {
     
-        const products = await dataModel.find()
+        const products = await dataModel.find({listing_id : {$eq: 3}})
+
         res.send(products)
         console.log(products)
         
