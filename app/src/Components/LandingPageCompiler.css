@@ -1,4 +1,6 @@
 #landing-page-bg{
-    font-size:50px; 
     /* background-color: red; */
+    max-width: 1800px; /**/
+    margin:0 auto;
+    color: white;
 }

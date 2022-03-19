@@ -7,11 +7,6 @@ export default function LandingPageCompiler() {
     <div id='landing-page-bg'>
         
         <LandingPageNavBar/>
-        <div id='blocker'>
-        LandingPageCompiler
-        LandingPageCompiler
-        LandingPageCompiler
-        </div>
         
     </div>
   )

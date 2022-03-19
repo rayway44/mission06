@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.landing-page-nav-bar{
+    font-family: 'Poppins', sans-serif;
+    border: 2px black solid;
+    background-color: #C01F3F;
+    padding: 10px 0px 10px 0px;
+    font-weight: 500;
+    font-size: 16px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.landing-page-nav-bar a{
+    color: white;
+    text-decoration: none;
+}
+
+.landing-page-nav-bar a:hover{
+    color: black;
+}
+
+.landing-page-nav-bar-left{
+    display:flex;
+    /* border: 2px yellow solid; */
+}
+
+.landing-page-nav-bar-right{
+    display:flex;
+    /* border: 2px yellow solid; */
+}
+
+.landing-page-nav-icon{
+    /* border: 2px solid green; */
+    padding: 0px 15px 0px 15px;
+    display:flex;
+    align-items: center;
+}
+
+.landing-page-nav-icon img{
+    width:200px; /* This will affect images in NAV BAR */
+}

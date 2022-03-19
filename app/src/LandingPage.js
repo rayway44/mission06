@@ -8,10 +8,6 @@ export default function LandingPage() {
     <div id='landing-page'>
 
         <LandingPageCompiler />
-        <LandingPageCompiler />
-        <LandingPageCompiler />
-        <LandingPageCompiler />
-        <LandingPageCompiler />
     
     </div>// ===== bottom of page
   )
