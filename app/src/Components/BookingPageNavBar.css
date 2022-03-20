@@ -1,0 +1,48 @@
+.booking-page-nav-bar{
+    border: 2px solid red;
+    /* width: 100%; */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.booking-page-nav-bar{
+    font-family: 'Poppins', sans-serif;
+    /* border: 2px black solid; */
+    /* background-color: #C01F3F; */
+    padding: 10px 0px 10px 0px;
+    font-weight: 500;
+    font-size: 16px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.booking-page-nav-bar a{
+    color: black;
+    text-decoration: none;
+}
+
+.booking-page-nav-bar a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.booking-page-nav-bar-left{
+    display:flex;
+    /* border: 2px yellow solid; */
+}
+
+.booking-page-nav-bar-right{
+    display:flex;
+    /* border: 2px yellow solid; */
+}
+
+.booking-page-nav-icon{
+    /* border: 2px solid green; */
+    padding: 0px 15px 0px 15px;
+    display:flex;
+    align-items: center;
+}
+
+.booking-page-nav-icon img{
+    width:200px; /* This will affect images in NAV BAR */
+}
