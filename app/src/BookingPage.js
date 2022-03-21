@@ -5,6 +5,9 @@ import BookingPageMainImg from './Components/BookingPageMainImg'
 import BookingMainPageSectionTwo from './Components/BookingMainPageSectionTwo'
 import BookingMainPageSectionThree from './Components/BookingMainPageSectionThree'
 import BookingMainPageSectionFour from './Components/BookingMainPageSectionFour'
+import BookingMainPageSectionFive from './Components/BookingMainPageSectionFive'
+import BookingMainPageSectionSix from './Components/BookingMainPageSectionSix'
+import BookingMainPageSectionSeven from './Components/BookingMainPageSectionSeven'
 import BookingPageFooter from './Components/BookingPageFooter'
 import './Components/BookingPage.css'
 
@@ -17,7 +20,10 @@ export default function BookingPage() {
         <BookingMainPageSectionTwo />
         <BookingMainPageSectionThree />
         <BookingMainPageSectionFour />
-        <BookingMainPageSectionOne />
+        <BookingMainPageSectionFive />
+        <BookingMainPageSectionSix />
+        <BookingMainPageSectionSeven />
+        
         <BookingPageFooter />
 
     </div>

@@ -15,8 +15,15 @@ export default function BookingMainPageSectionOne() {
   return (
     <div id='booking-main-page-section-four'>
         <div id='booking-main-page-section-four-holder'>
-            <div>
-              Top Holder  
+            <div id='booking-main-page-section-four-top'>
+              <div id='booking-main-page-section-four-top-holder'>
+                <div class ='booking-main-page-section-four-top-left'>
+                Property Information
+                </div>  
+                <div class ='booking-main-page-section-four-top-right'>
+                  Right
+                </div>  
+              </div>
             </div>
             <div id='booking-main-page-section-four-map-holder'>
               <Map />

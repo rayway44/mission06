@@ -1,6 +1,6 @@
 
 #booking-main-page-section-four{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display:flex;
     justify-content: center;
     /* min-height: 200px; */
@@ -9,11 +9,59 @@
 
 #booking-main-page-section-four-holder{
     width: 80%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 #booking-main-page-section-four-map-holder{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     /* width: 1521px; */
     height: 800px;
+}
+
+#booking-main-page-section-four-top{
+    /* border: 2px solid red; */
+
+    font-size: 18px;
+    display:flex;
+    justify-content:center;
+
+}
+
+#booking-main-page-section-four-top-holder{
+    border: 2px solid rgba(235, 235, 235, 1);
+    display:flex;
+    padding:10px 10px 10px 10px;
+    border-radius: 12px;;
+    background-color:rgba(227, 227, 227, 1);
+    
+    margin:0px 0px 30px 0px;
+}
+
+.booking-main-page-section-four-top-left{
+    border: 1px solid rgba(235, 235, 235, 1);
+    
+    width:353px;
+    border-radius:12px;
+    height: 60px;
+    display:flex;
+    justify-content: center;
+    align-items: center
+}
+
+.booking-main-page-section-four-top-right{
+    border: 1px solid rgba(235, 235, 235, 1);
+
+    width:353px;
+    border-radius:12px;
+    height: 60px;
+    display:flex;
+    justify-content: center;
+    align-items: center
+}
+
+.booking-main-page-section-four-top-left:hover{
+    background-color: white;
+}
+.booking-main-page-section-four-top-right:hover{
+    background-color: white;
 }

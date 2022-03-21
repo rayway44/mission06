@@ -1,0 +1,17 @@
+
+#booking-main-page-section-five{
+    /* border: 2px solid red; */
+    display:flex;
+    justify-content: center;
+    /* min-height: 200px; */
+    padding:40px 0px 60px 0px;
+}
+
+#booking-main-page-section-five-holder{
+    width: 80%;
+    /* border: 2px solid red; */
+}
+#booking-main-page-section-five-holder img{
+    width: 100%;
+    /* border: 2px solid red; */
+}

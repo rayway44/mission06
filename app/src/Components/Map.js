@@ -20,7 +20,7 @@ import {
     const propertyOne = { lat: -36.8469154, lng: 174.7417116 };
     const propertyTwo = { lat: -36.8486661, lng: 174.7423653 };
     const propertyThree = { lat: -36.8470639, lng: 174.7404854 };
-    const zoom = 15
+    const zoom = 16
   
     const contentString = <h1> LETS GO</h1>
   
