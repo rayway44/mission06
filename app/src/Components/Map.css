@@ -1,0 +1,36 @@
+#page-01-box{
+  /* border: 2px solid red; */
+}
+
+#map-holder{
+  border: 2px solid green;
+  /* width: 1000px;
+  height: 600px; */
+}
+
+.map{
+  /* border: 2px solid red; */
+  height:100%;
+  /* width:100%; */
+  color: black;
+}
+
+.map-map{
+  /* border: 12px solid green; */
+  height:100%;
+}
+
+.dropdown{
+  width: 200px;
+  font-size:20px;
+}
+
+.infoWindow{
+  /* min-width:140px;
+  min-height:140px; */
+  color: black;
+  font-size:20px;
+}
+#infoWindow{
+  border: 12px solid red;
+}
