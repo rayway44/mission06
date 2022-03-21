@@ -5,7 +5,7 @@ import { useLoadScript } from "@react-google-maps/api";
 
 export default function BookingMainPageSectionOne() {
 
-  const API_KEY = `AIzaSyCTguzByLKCcv6eVpbBmb78PGJlK5_f07M`
+  const API_KEY = process.env.REACT_APP_GOOGLE_MAP_API_KEY
     const { isLoaded } = useLoadScript({
       googleMapsApiKey: API_KEY // Add your API key
     });
