@@ -11,6 +11,7 @@
 #booking-main-page-section-two-holder{
     width: 80%;
     display:flex;
+    /* border: 2px solid red; */
 }
 
 .booking-main-page-section-two-icon{

@@ -1,0 +1,19 @@
+
+#booking-main-page-section-four{
+    border: 2px solid red;
+    display:flex;
+    justify-content: center;
+    /* min-height: 200px; */
+    padding:0px 0px 0px 0px;
+}
+
+#booking-main-page-section-four-holder{
+    width: 80%;
+    border: 2px solid red;
+}
+
+#booking-main-page-section-four-map-holder{
+    border: 2px solid red;
+    /* width: 1521px; */
+    height: 800px;
+}

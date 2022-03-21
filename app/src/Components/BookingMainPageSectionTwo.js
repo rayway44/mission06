@@ -46,7 +46,6 @@ export default function BookingMainPageSectionOne() {
                     <br/>Pet Friendly
                 </div>
             </div>
-
         </div>
     </div>
   )

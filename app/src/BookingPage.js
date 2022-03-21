@@ -1,9 +1,11 @@
 import React from 'react'
 import BookingPageNavBar from './Components/BookingPageNavBar'
-import BookingPageMainImg from './Components/BookingPageMainImg'
 import BookingMainPageSectionOne from './Components/BookingMainPageSectionOne'
-import BookingPageFooter from './Components/BookingPageFooter'
+import BookingPageMainImg from './Components/BookingPageMainImg'
 import BookingMainPageSectionTwo from './Components/BookingMainPageSectionTwo'
+import BookingMainPageSectionThree from './Components/BookingMainPageSectionThree'
+import BookingMainPageSectionFour from './Components/BookingMainPageSectionFour'
+import BookingPageFooter from './Components/BookingPageFooter'
 import './Components/BookingPage.css'
 
 export default function BookingPage() {
@@ -13,6 +15,8 @@ export default function BookingPage() {
         <BookingPageMainImg />
         <BookingMainPageSectionOne />
         <BookingMainPageSectionTwo />
+        <BookingMainPageSectionThree />
+        <BookingMainPageSectionFour />
         <BookingMainPageSectionOne />
         <BookingPageFooter />
 
