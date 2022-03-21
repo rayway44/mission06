@@ -3,6 +3,7 @@ import BookingPageNavBar from './Components/BookingPageNavBar'
 import BookingPageMainImg from './Components/BookingPageMainImg'
 import BookingMainPageSectionOne from './Components/BookingMainPageSectionOne'
 import BookingPageFooter from './Components/BookingPageFooter'
+import BookingMainPageSectionTwo from './Components/BookingMainPageSectionTwo'
 import './Components/BookingPage.css'
 
 export default function BookingPage() {
@@ -11,6 +12,7 @@ export default function BookingPage() {
         <BookingPageNavBar />
         <BookingPageMainImg />
         <BookingMainPageSectionOne />
+        <BookingMainPageSectionTwo />
         <BookingMainPageSectionOne />
         <BookingPageFooter />
 
