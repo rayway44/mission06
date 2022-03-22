@@ -1,13 +1,27 @@
 import React from 'react'
 
+import { useState } from 'react';
+import Party from './party.png'
+
 import './FormSection.css'
 
 function FormSection() {
+
+    const [visible, setVisible] = useState(1);
+    const firstscreen = () => {
+        setVisible(1)
+    }
+    const secondscreen = () => {
+        setVisible(2)
+    }
+    
+
+
   return (
     <div>
         <div className='formsection-container'>
-            <div className='formsection-content'>
-                <div className='formsection-title'>
+        {visible === 1 && <div className='formsection-content'>
+          <div className='formsection-title'>
                     <div id='book'>
                         Book a viewing
                     </div>
@@ -22,7 +36,7 @@ function FormSection() {
                 
                     <p className='or'>---------------or---------------</p>
                 
-                <div className='formsection-form'>
+                     <div className='formsection-form'>
                     <div className=''>
                         <label>Full Name:</label>
                     </div>
@@ -56,12 +70,19 @@ function FormSection() {
                     </div>
                     </div>
                     <div>
-                        <button id='booknow'>Book Now</button>
+                        <button  id='booknow' onClick={secondscreen}>{visible ? 'Hide' : 'Book Now'}</button>
+                        
                     </div>
 
                 </div>
 
-            </div>
+            </div>} {visible === 2 && 
+            <div>
+                <div id='result-title'>WooHoo! all done</div>
+
+                <img src={Party} alt='' />
+                <button id='booknow'>Return Home</button>
+            </div>}
 
         </div>
     </div>
