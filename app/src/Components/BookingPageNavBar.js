@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export default function BookingPageNavBar() {
 
-    
+    // grabs search params from URL
     const {search} = useLocation()
     const searchParams = new URLSearchParams(search)
 
@@ -36,9 +36,6 @@ export default function BookingPageNavBar() {
             </div>
             <div class='booking-page-nav-icon'>
                 <a href=''>Home</a>
-            </div>
-            <div class='booking-page-nav-icon' >
-                BOMBS
             </div>
             <div class='booking-page-nav-icon'>
                 <a href=''>Property Search</a> 
