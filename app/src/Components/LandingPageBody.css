@@ -100,6 +100,16 @@
     border: 2px solid rgba(235, 235, 235, 1);
 }
 
+.landing-page-body-search-btn a{
+    /* border: 2px solid black; */
+    color: white;
+    text-decoration: none;
+}
+
+.landing-page-body-search-btn a:hover{
+    color:#bc253d;
+}
+
 .landing-page-body-line-bottom-left{
     /* border: 2px solid black; */
     display: flex;

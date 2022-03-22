@@ -1,12 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 import LandingPage from './LandingPage'
-import BookingPage from './BookingPage';
+import BookingPage from './BookingPage'
+import Hitter from './Hitter'
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+
 
 function App() {
   return (
     <div class='App'>
-      <BookingPage />
+          
+        <Router>
+
+
+              <Routes>
+                <Route path='/hi' element={<Hitter />} />
+                <Route path='/booking' element={<BookingPage />} />
+                <Route path='/' element={<LandingPage />} />
+              </Routes>
+
+        </Router>
+
+
     </div>
   );
 }

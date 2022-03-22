@@ -12,6 +12,7 @@ import BookingPageFooter from './Components/BookingPageFooter'
 import './Components/BookingPage.css'
 
 export default function BookingPage() {
+
   return (
     <div id='booking-page-holder'>
         <BookingPageNavBar />
