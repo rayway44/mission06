@@ -1,6 +1,7 @@
 const express = require('express')
 const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
+const router = express.Router()
 
 const app = express()
 const port = 5000 //CHANGE: What port would you like to run 
@@ -38,7 +39,7 @@ const port = 5000 //CHANGE: What port would you like to run
 
 
 // Listing all DOCUMENTS from database - DO NOT CHANGE
-app.get('/',(req,res) => {
+router.get('/',(req,res) => {
 
             documentPull.find({})
             .then((result) => {
@@ -51,25 +52,28 @@ app.get('/',(req,res) => {
 })
 
 // SEARCH: Here is where you can write your SEARCH QUERIES
-app.get('/find',(req,res) => {
+router.get('/find',(req,res) => {
 
-    const bedroom = req.params.bedroom
-    const priceLow = '800'
-    const priceHigh = '1,475'
-    // 1,475
+            const bedroom = req.params.bedroom
+            const priceLow = '890'
+            const priceHigh = '1,475'
+            // 1,475
 
-    documentPull.find({}).sort({address:1})
-    .then((result) => {
-        // console.log(result)
-        res.send(result)
-    })
-    .catch(err => { 
-        console.log(err)
-    })
+            documentPull.find({price: {$eq: priceLow}}).limit().sort({price:-1})
+            .then((result) => {
+                // console.log(result)
+                res.send(result)
+            })
+            .catch(err => { 
+                console.log(err)
+            })
+    
 
 
 })
 
-app.listen(`${port}`, () => {
-    console.log(`you are listening on port ${port}`)
-})
+// app.listen(`${port}`, () => {
+//     console.log(`you are listening on port ${port}`)
+// })
+
+module.exports = router
