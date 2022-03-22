@@ -1,0 +1,14 @@
+.listing-page-map-holder {
+  height: 800px;
+  width: 100%;
+}
+
+.listing-page-complied-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.listing-page-border-patrol {
+  max-width: 1920px;
+  margin: 0 auto;
+}
