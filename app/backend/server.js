@@ -6,15 +6,13 @@ const router = express.Router()
 const app = express()
 const port = 5000 //CHANGE: What port would you like to run 
 
-        const user = process.env.DB_USERNAME
-        const password = process.env.DB_PASSWORD
 
         // Name of DATABASE you are trying to access
         const database = `property`
         
         // const uriRay = `mongodb+srv://${user}:${password}@cluster0.rw4si.mongodb.net/mission06-property?retryWrites=true&w=majority`
         const uri = `mongodb+srv://admin:raystu123@mission-6.kcvmu.mongodb.net/${database}?retryWrites=true&w=majority`
-        const uriRay = `mongodb+srv://${user}:${password}@cluster0.rw4si.mongodb.net/${database}?retryWrites=true&w=majority`
+        // const uriRay = `mongodb+srv://${user}:${password}@cluster0.rw4si.mongodb.net/${database}?retryWrites=true&w=majority`
         
         // Create connectin to MongoDB
         mongoose.connect(uri, {
@@ -70,6 +68,7 @@ router.get('/find',(req,res) => {
                 console.log(err)
             })
     
+
 
 })
 
