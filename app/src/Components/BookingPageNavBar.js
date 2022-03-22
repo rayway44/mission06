@@ -14,13 +14,16 @@ export default function BookingPageNavBar() {
     const suburb = searchParams.get('suburb')
     const rent = searchParams.get('rent')
     const bedroom = searchParams.get('bedroom')
+    const bathroom = searchParams.get('bathroom')
+    const pet = searchParams.get('pet')
+    const smoker = searchParams.get('smoker')
 
 
     console.log(`${property} - ${city} - ${suburb}`)
 
     // const query = name + age 
 
-    axios.get(`http://localhost:5000/booking/${property}/${city}/${suburb}/${rent}/${bedroom}/`)
+    axios.get(`http://localhost:5000/booking/${property}/${city}/${suburb}/${rent}/${bedroom}/${bathroom}/${pet}/${smoker}`)
     .then(res => {
         const result = res
         console.log(result)

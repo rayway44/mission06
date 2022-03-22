@@ -58,34 +58,42 @@ app.get('/',(req,res) => {
 
 
 
-app.get('/booking/:property/:city/:suburb/:rent/:bedroom', (req, res) => {
+app.get('/booking/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker', (req, res) => {
     
+
             const property = req.params.property
             const city = req.params.city
             const suburb = req.params.suburb
             const rent = req.params.rent
             const bedroom = req.params.bedroom
+            const bathroom = req.params.bathroom
+            const pet = req.params.pet
+            const smoker = req.params.smoker
 
-            const query = `your query is - Property:${property}
+            const query = `your query is 
+            - Property:${property}
             - city:${city}
             - suburb:${suburb}
             - rent:${rent}
-            - bedroom:${bedroom}` 
+            - bedroom:${bedroom}
+            - bathroom:${bathroom} 
+            - pet:${pet}
+            - smoker:${smoker}`
             
             console.log(query)
 
-            documentPull.find({property_type: property ,city: city ,price:{$lte:rent}}).sort({price:-1})
-            .then((result) => {
-                console.log(result)
-                res.send(result)
-            })
-            .catch(err => { 
-                console.log(err)
-            })
+                    // documentPull.find({property_type: property ,city: city ,price:{$lte:rent}}).sort({price:-1})
+                    // .then((result) => {
+                    //     console.log(result)
+                    //     res.send(result)
+                    // })
+                    // .catch(err => { 
+                    //     console.log(err)
+                    // })
 
 })
 
-
+// Postman Testing endpoint
 app.get('/hit',(req,res) => {
 
             const property = 'House'

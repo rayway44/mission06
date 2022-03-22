@@ -8,37 +8,59 @@ import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 export default function LandingPageBody() {
 
     const [bedroom, setBedroom] = useState(1)
+    const [bathroom, setBathroom] = useState(1)
 
     const [property, setProperty] = useState('House')
     const [suburb, setSuburb] = useState('Epsom')
     const [city, setCity] = useState('Auckland City')
     const [rent, setRent] = useState('800')
     
-    const link = `/booking?property=${property}&city=${city}&suburb=${suburb}&rent=${rent}&bedroom=${bedroom}`
+    const [pet, setPet] = useState(false)
+    const [smoker, setSmoker] = useState(false)
+    
+    const link = `/booking?property=${property}&city=${city}&suburb=${suburb}&rent=${rent}&bedroom=${bedroom}&bathroom=${bathroom}&pet=${pet}&smoker=${smoker}`
  
-
+    // ==============================
     function bedroomCountAdd(){
         
-        if(bedroom <= 2){
-            console.log('hit')
+        if(bedroom <= 3){
             setBedroom(bedroom + 1)
-        } else if(bedroom >= 2){
-            console.log('less')
-            setBedroom(3)
         } else {
-            console.log('pass')
-
-            setBedroom(3)
+            setBedroom(4)
         }
-
+            
     }
 
     function bedroomCountSubtract(){
         
-        
-        setBedroom(bedroom - 1)
+        if(bedroom <= 2){
+            setBedroom(1)
+        } else {
+            setBedroom(bedroom - 1)
+        }
         
     }
+
+    function bathroomCountAdd(){
+        
+        if(bathroom <= 3){
+            setBathroom(bathroom + 1)
+        } else {
+            setBathroom(4)
+        }
+    }
+
+    function bathroomCountSubtract(){
+        
+        
+        if(bathroom <= 2){
+            setBathroom(1)
+        } else {
+            setBathroom(bathroom - 1)
+        }
+    
+    }
+
 
   return (
     <div id='landing-page-body'>
@@ -107,9 +129,9 @@ export default function LandingPageBody() {
                         <div class='landing-page-body-line-1'>
                             Bathrooms:<br/>
                             <div class='landing-page-body-line-1-btn'>
-                                <div class='landing-page-body-line-1-minus'>-</div>
-                                <div class='landing-page-body-line-1-box'>12</div>
-                                <div class='landing-page-body-line-1-add'>+</div>
+                                <div class='landing-page-body-line-1-minus' onClick={bathroomCountSubtract}>-</div>
+                                <div class='landing-page-body-line-1-box'>{bathroom}</div>
+                                <div class='landing-page-body-line-1-add' onClick={bathroomCountAdd}>+</div>
                             </div>
                         </div>
 
@@ -126,10 +148,10 @@ export default function LandingPageBody() {
                     <div class='landing-page-body-line-holder-bottom'>
                         <div class='landing-page-body-line-bottom-left'>
                             <div class='landing-page-body-line-1'>
-                                Pets Ok <input type='radio'></input>
+                                Pets Ok <input type='checkbox' onChange={e => setPet(e.target.checked)}></input>
                             </div>
                             <div class='landing-page-body-line-1'>
-                                Smokers <input type='radio'></input>
+                                Smokers <input type='checkbox' onChange={e => setSmoker(e.target.checked)}></input>
                             </div>
                         </div>
 
