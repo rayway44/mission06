@@ -57,11 +57,11 @@ router.get('/',(req,res) => {
 router.get('/find',(req,res) => {
 
             const bedroom = req.params.bedroom
-            const priceLow = '800'
+            const priceLow = '890'
             const priceHigh = '1,475'
             // 1,475
 
-            documentPull.find({price: {$gte: priceLow}}).limit().sort({price:1})
+            documentPull.find({price: {$eq: priceLow}}).limit().sort({price:-1})
             .then((result) => {
                 // console.log(result)
                 res.send(result)
