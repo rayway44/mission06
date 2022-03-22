@@ -1,0 +1,124 @@
+
+#landing-page-body{
+    /* border: 2px solid white; */
+    display:flex;
+    justify-content: space-between;
+}
+
+#landing-page-body-left{
+    /* background-color:#bc253d; */
+    width: 70%;
+}
+
+#landing-page-body-main-text{
+    /* border: 2px solid yellow; */
+    padding: 80px 0px 40px 0px;
+    font-size: 90px;
+}
+
+#landing-page-body-right{
+    width:40%;
+}
+
+#landing-page-body-search-box{
+    padding:10px;
+    width: 800px;
+    background-color: rgb(255,255,255);
+    color:black;
+    padding:20px;
+    border-radius: 10px;
+    border: 2px solid pink;
+}
+
+.landing-page-body-line-1{
+    border: 2px solid white;
+    font-size:20px;
+    padding:10px;
+}
+
+.landing-page-body-line-1 select{
+    width:200px;
+    font-size:20px;
+    background-color: white;
+    border-radius:8px;
+    padding:3px;
+    color:#8C8C8C;
+}
+
+.landing-page-body-line-holder{
+    display: flex;
+}
+
+.landing-page-body-line-1-btn{
+    /* border: 2px solid black; */
+    display: flex;
+    color:rgba(140, 140, 140, 1);
+    
+}
+
+.landing-page-body-line-1-minus{
+    border: 2px solid rgba(235, 235, 235, 1);
+    padding:0px 8px 0px 8px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    min-width: 20px;
+    text-align: center;
+}
+.landing-page-body-line-1-add{
+    border: 2px solid rgba(235, 235, 235, 1);
+    padding:0px 8px 0px 8px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.landing-page-body-line-1-box{
+    border: 2px solid rgba(235, 235, 235, 1);
+    padding:0px 8px 0px 8px;
+    min-width: 40px;
+    text-align: center;
+    background-color:rgb(253,253,253);
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+}
+
+.landing-page-body-line-1-minus:hover{
+    background-color: #bc253d;
+}
+.landing-page-body-line-1-add:hover{
+    background-color: #bc253d;
+}
+
+.landing-page-body-search-btn{
+    background-color: #bc253d;
+    color: white;
+    padding:6px 0px 6px 0px;
+    width:250px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid rgba(235, 235, 235, 1);
+}
+
+.landing-page-body-line-bottom-left{
+    /* border: 2px solid black; */
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.landing-page-body-line-holder-bottom{
+    display: flex;
+    /* border: 2px solid pink; */
+    justify-content: space-between;
+}
+
+.landing-page-keywords{
+        /* border: 2px solid pink; */
+        width:750px;
+        font-size:20px;
+        background-color: white;
+        border-radius:8px;
+        padding:3px;
+        color:#8C8C8C;
+}

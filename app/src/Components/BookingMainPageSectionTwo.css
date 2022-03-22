@@ -1,0 +1,41 @@
+
+#booking-main-page-section-two{
+    /* border: 2px solid red; */
+    /* min-height: 200px; */
+    display:flex;
+    justify-content: center;
+    
+    margin:30px 0px 0px 0px;
+}
+
+#booking-main-page-section-two-holder{
+    width: 80%;
+    display:flex;
+    /* border: 2px solid red; */
+}
+
+.booking-main-page-section-two-icon{
+    border: 2px solid rgba(235, 235, 235, 1);
+    height: 280px;
+    width: 280px;
+    margin:4px;
+    border-radius:12px;
+    background-color:rgba(255, 255, 255, 1);
+    font-size:22px;
+    color: rgba(107, 108, 126, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.booking-main-page-section-two-icon-img{
+    Margin: 0px 0px 0px 0px;
+    
+    /* border: 2px solid red; */
+}
+
+.booking-main-page-section-two-icon-title{
+    Margin: 0px 0px 0px 0px;
+    /* border: 2px solid red; */
+}
