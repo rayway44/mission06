@@ -59,7 +59,7 @@ router.get('/find',(req,res) => {
             const priceHigh = '1,475'
             // 1,475
 
-            documentPull.find({price: {$eq: priceLow}}).limit().sort({price:-1})
+            documentPull.find({price: {$lte: priceLow}}).limit().sort({price:-1})
             .then((result) => {
                 // console.log(result)
                 res.send(result)
