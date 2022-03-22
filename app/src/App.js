@@ -6,7 +6,8 @@ import BookingPage from './BookingPage';
 function App() {
   return (
     <div class='App'>
-      <BookingPage />
+      <BookingPage /> 
+      {/* <LandingPage /> */}
     </div>
   );
 }
