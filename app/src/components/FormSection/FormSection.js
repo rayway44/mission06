@@ -70,7 +70,7 @@ function FormSection() {
                     </div>
                     </div>
                     <div>
-                        <button  id='booknow' onClick={secondscreen}>{visible ? 'Hide' : 'Book Now'}</button>
+                        <button  id='booknow' onClick={secondscreen}>Book Now</button>
                         
                     </div>
 
