@@ -1,8 +1,8 @@
-import Listing from './components/Listing/Listing';
+// import Listing from './components/Listing/Listing';
 import './App.css';
-
-import CardCarousel from './components/CardCarousel/CardCarousel';
-import FormSection from './components/FormSection/FormSection';
+import BookingPage from './BookingPage'
+// import CardCarousel from './components/CardCarousel/CardCarousel';
+// import FormSection from './components/FormSection/FormSection';
 
 function App() {
   return (

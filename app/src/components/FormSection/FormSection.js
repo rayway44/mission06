@@ -45,12 +45,12 @@ function FormSection() {
 
                 <div className='formsection-bottom'>
                     <div className='formsection-checkbox'>
-                    <div>
+                    <div className='formsection-item'>
                         <input type="checkbox"/>
                         <label for=""><p className='label-text'>I agree to the <a id='label-link'>terms and conditions</a></p>  </label>
                         
                     </div>
-                    <div>
+                    <div className='formsection-item'>
                     <input type="checkbox" />
                         <label for=""> <p className='label-text'>I'd like to get notified on new similar listings</p></label>
                     </div>

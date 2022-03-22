@@ -57,12 +57,14 @@
   justify-content: space-evenly;
   align-items: flex-start;
   /* border: 1px solid red; */
+  margin-top: 20px;
   height: 380px;
+  font-size: 18px;
 }
 
 .formsection-input {
   width: 436px;
-  height: 64px;
+  height: 44px;
   border-radius: 6px;
   border: 1px solid #8692a6;
 }
@@ -80,16 +82,17 @@
 .formsection-checkbox {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
-  height: 80px;
-  /* border: 1px solid red; */
+  height: 60px;
+  /* border: 1px solid green; */
 }
 
 .label-text {
   display: flex;
   justify-content: center;
   margin-left: 8px;
+  font-size: 12px;
 }
 
 #label-link {
@@ -105,4 +108,10 @@
   background-color: #bc243d;
   border: none;
   color: #ffffff;
+}
+
+.formsection-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
