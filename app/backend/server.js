@@ -57,7 +57,7 @@ app.get('/',(req,res) => {
 
 
 
-
+// Backend API from LandingPage <<<<    
 app.get('/booking/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker', (req, res) => {
     
 
