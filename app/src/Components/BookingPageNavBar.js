@@ -56,18 +56,18 @@ export default function BookingPageNavBar() {
                 
 
 
-        <div class='booking-page-nav-bar-right'>
-            <div class='booking-page-nav-icon'>
+        <div className='booking-page-nav-bar-right'>
+            <div className='booking-page-nav-icon'>
                 <a href=' '>About</a> 
             </div>
             
-            <div class='booking-page-nav-icon'>
+            <div className='booking-page-nav-icon'>
                 <a href=' '>Contact Us</a> 
             </div>
-            <div class='booking-page-nav-icon'>
+            <div className='booking-page-nav-icon'>
                 <a href=' '>icon</a> 
             </div>
-            <div class='booking-page-nav-icon'>
+            <div className='booking-page-nav-icon'>
                 <a href=' '>icon</a> 
             </div>
 

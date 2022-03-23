@@ -54,20 +54,20 @@ export default function BookingPageMainImg() {
               </div>
             </div>
         </div>
-        <div class='booking-page-footer-line3-holder'>
-          <div class='booking-page-footer-line3-holder-left'>
-            <div class='booking-page-footer-line3-holder-box1'>
+        <div className='booking-page-footer-line3-holder'>
+          <div className='booking-page-footer-line3-holder-left'>
+            <div className='booking-page-footer-line3-holder-box1'>
               Terms & Conditions
             </div>
-            <div class='booking-page-footer-line3-holder-box2'>
+            <div className='booking-page-footer-line3-holder-box2'>
               Privacy Policy
             </div>
           </div>
-          <div class='booking-page-footer-line3-holder-right'>
-            <div class='booking-page-footer-line3-holder-icon'>
+          <div className='booking-page-footer-line3-holder-right'>
+            <div className='booking-page-footer-line3-holder-icon'>
               icon three
             </div>
-            <div class='booking-page-footer-line3-holder-icon'>
+            <div className='booking-page-footer-line3-holder-icon'>
               icon two
             </div>
             <div>

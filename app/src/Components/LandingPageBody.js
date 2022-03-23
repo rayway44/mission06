@@ -137,26 +137,36 @@ export default function LandingPageBody() {
                     </div>
 
                     
-                    <div class='landing-page-body-line-holder'>
-                        <div class='landing-page-body-line-1'>
+                    <div 
+                    className='landing-page-body-line-holder'>
+                        <div 
+                        className='landing-page-body-line-1'>
                             Keywords<br/>
-                           <input type='textarea' placeholder='' class='landing-page-keywords'></input>
+                           <input type='textarea' placeholder='' 
+                           className='landing-page-keywords'></input>
                         </div>
                     </div>
-                    <div class='landing-page-body-line-holder-bottom'>
-                        <div class='landing-page-body-line-bottom-left'>
-                            <div class='landing-page-body-line-1'>
+                    <div 
+                    className='landing-page-body-line-holder-bottom'>
+                        <div 
+                        className='landing-page-body-line-bottom-left'>
+                            <div 
+                            className='landing-page-body-line-1'>
                                 Pets Ok <input type='checkbox' onChange={e => setPet(e.target.checked)}></input>
                             </div>
-                            <div class='landing-page-body-line-1'>
+                            <div 
+                            className='landing-page-body-line-1'>
                                 Smokers <input type='checkbox' onChange={e => setSmoker(e.target.checked)}></input>
                             </div>
                         </div>
 
-                        <div class='landing-page-body-line-bottom-right'>
-                            <div class='landing-page-body-line-1'>
+                        <div 
+                        className='landing-page-body-line-bottom-right'>
+                            <div 
+                            className='landing-page-body-line-1'>
 
-                                    <div class='landing-page-body-search-btn' >
+                                    <div 
+                                    className='landing-page-body-search-btn' >
                                     <Link to={link}>Bookings</Link>
                                 
                                     </div>
