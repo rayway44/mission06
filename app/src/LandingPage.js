@@ -1,6 +1,6 @@
 import React from 'react'
-import LandingPageCompiler from './Components/LandingPageCompiler'
-import './Components/LandingPage.css'
+import LandingPageCompiler from './Compo/LandingPageCompiler'
+import './Compo/LandingPage.css'
 
 
 export default function LandingPage() {

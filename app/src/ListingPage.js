@@ -1,7 +1,7 @@
 import React from 'react'
-import BookingPageNavBar from './Components/BookingPageNavBar'
-import Listing from './Components/Listing/Listing'
-import Map from './Components/Map'
+import BookingPageNavBar from './Compo/BookingPageNavBar'
+import Listing from './Compo/Listing/Listing'
+import Map from './Compo/Map'
 
 import './ListingPage.css'
 
