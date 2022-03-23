@@ -1,27 +1,32 @@
 
 import './App.css';
-import LandingPage from './LandingPage'
 import BookingPage from './BookingPage'
-import Hitter from './Hitter'
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import ListingPage from './ListingPage';
+import LandingPage from './LandingPage'
+
+
+import React from "react";
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 
 function App() {
   return (
     <div class='App'>
-          
-        <Router>
 
+      <Router>
+        <Routes>
+            <Route path='/' element={<LandingPage />} />
+            <Route path='/listing' element={<ListingPage />} />
+            <Route path='/booking' element={<BookingPage />} />
+        </Routes>
 
-              <Routes>
-                <Route path='/hi' element={<Hitter />} />
-                <Route path='/booking' element={<BookingPage />} />
-                <Route path='/' element={<LandingPage />} />
-              </Routes>
-
-        </Router>
-
-
+      </Router>
+      
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './BookingMainPageSectionSix.css'
 import Calendar from 'react-calendar'
 import './Calendar.css';
+import FormSection from './FormSection/FormSection'
 
 export default function BookingMainPageSectionOne() {
 
@@ -10,9 +11,11 @@ export default function BookingMainPageSectionOne() {
   return (
     <div id='booking-main-page-section-six'>
         <div id='booking-main-page-section-six-holder'>
+
             Section Six<br/>
-            Hi stu place your calender here please
-            <Calendar onChange={setCalendar} value={calendar}/>
+            <Calendar onChange={setCalendar} value={calendar}/
+            <FormSection />
+
         </div>
     </div>
   )

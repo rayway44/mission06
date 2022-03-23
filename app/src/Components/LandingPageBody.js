@@ -1,9 +1,6 @@
 import React, {useState} from 'react'
 import './LandingPageBody.css'
-
-
 import { Link} from 'react-router-dom'
-
 
 export default function LandingPageBody() {
 
@@ -18,7 +15,7 @@ export default function LandingPageBody() {
     const [pet, setPet] = useState()
     const [smoker, setSmoker] = useState()
     
-    const link = `/booking?property=${property}&city=${city}&suburb=${suburb}&rent=${rent}&bedroom=${bedroom}&bathroom=${bathroom}&pet=${pet}&smoker=${smoker}`
+    const link = `/listing?property=${property}&city=${city}&suburb=${suburb}&rent=${rent}&bedroom=${bedroom}&bathroom=${bathroom}&pet=${pet}&smoker=${smoker}`
  
     // ==============================
     function bedroomCountAdd(){
@@ -60,6 +57,7 @@ export default function LandingPageBody() {
         }
     
     }
+
 
 
   return (
@@ -157,10 +155,14 @@ export default function LandingPageBody() {
 
                         <div class='landing-page-body-line-bottom-right'>
                             <div class='landing-page-body-line-1'>
+
                                     <div class='landing-page-body-search-btn' >
                                     <Link to={link}>Bookings</Link>
                                 
                                     </div>
+
+                               
+
                             </div>
                         </div>
                     </div>
