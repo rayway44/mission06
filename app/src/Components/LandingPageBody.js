@@ -17,7 +17,7 @@ export default function LandingPageBody() {
     
     const link = `/listing?property=${property}&city=${city}&suburb=${suburb}&rent=${rent}&bedroom=${bedroom}&bathroom=${bathroom}&pet=${pet}&smoker=${smoker}`
  
-    // ==============================
+    
     function bedroomCountAdd(){
         
         if(bedroom <= 3){

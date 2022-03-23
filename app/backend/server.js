@@ -147,6 +147,24 @@ router.get('/find',(req,res) => {
 
 })
 
+router.get('/find/:listing_id',(req,res) => {
+
+    const listingId = req.params.listing_id
+    const holder = parseInt(listingId)
+   
+    documentPull.find({listing_id: holder})
+    .then((result) => {
+        // console.log(result)
+        res.send(result)
+    })
+    .catch(err => { 
+        console.log(err)
+    })
+
+
+
+})
+
 // app.listen(`${port}`, () => {
 //     console.log(`you are listening on port ${port}`)
 // })

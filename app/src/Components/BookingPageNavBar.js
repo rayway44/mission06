@@ -3,6 +3,8 @@ import './BookingPageNavBar.css'
 import { Link, useLocation } from 'react-router-dom'
 import axios from 'axios'
 
+import Logo from './logoWhite.png'
+
 export default function BookingPageNavBar() {
 
     // grabs search params from URL
@@ -35,7 +37,7 @@ export default function BookingPageNavBar() {
 
         <div class='booking-page-nav-bar-left'>
             <div class='booking-page-nav-icon'>
-                <img src='images/auckland-property-management-white.png' alt='auck'/> 
+                <img src={Logo} alt='auck'/> 
             </div>
             <div class='booking-page-nav-icon'>
                 <a href=' '>Home</a>

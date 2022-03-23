@@ -63,8 +63,9 @@ function Listing() {
         <div>
             
             <div className='card-container'>
-                <Link to='/booking'>
+                
                 {project.map((ele, index) => (
+                    <Link to={ `/booking/${ele.listing_id}`}>
                         <div className='card-holder'>
                             <img src={ele.images} alt='img'/>
 
@@ -95,9 +96,9 @@ function Listing() {
                             
                             
                         </div>
-                    
+                        </Link>
                     ))}
-                    </Link>
+                    
                 </div>
             
         
