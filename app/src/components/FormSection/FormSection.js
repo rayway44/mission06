@@ -5,6 +5,8 @@ import Party from './party.png'
 
 import './FormSection.css'
 
+import {Link} from 'react-router-dom'
+
 function FormSection() {
 
     const [visible, setVisible] = useState(1);
@@ -81,7 +83,9 @@ function FormSection() {
                 <div id='result-title'>WooHoo! all done</div>
 
                 <img src={Party} alt='' />
+                <Link to='/'>
                 <button id='booknow'>Return Home</button>
+                </Link>
             </div>}
 
         </div>

@@ -1,7 +1,11 @@
 import React from 'react'
 import './LandingPageBody.css'
 
+import { Link} from 'react-router-dom'
+
 export default function LandingPageBody() {
+
+
   return (
     <div id='landing-page-body'>
 
@@ -117,7 +121,9 @@ export default function LandingPageBody() {
 
                         <div class='landing-page-body-line-bottom-right'>
                             <div class='landing-page-body-line-1'>
+                                <Link to={'/listing'}>
                                 <div class='landing-page-body-search-btn'>Search</div>
+                                </Link>
                             </div>
                         </div>
                     </div>

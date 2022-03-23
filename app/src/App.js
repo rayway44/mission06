@@ -1,16 +1,29 @@
-// import Listing from './components/Listing/Listing';
+
 import './App.css';
 import BookingPage from './BookingPage'
 import ListingPage from './ListingPage';
-// import CardCarousel from './components/CardCarousel/CardCarousel';
-// import FormSection from './components/FormSection/FormSection';
+import LandingPage from './LandingPage'
+
+import React from "react";
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
     <div class='App'>
-      <BookingPage /> 
-      {/* <LandingPage /> */}
-      {/* <ListingPage /> */}
+      <Router>
+        <Routes>
+            <Route path='/' element={<LandingPage />} />
+            <Route path='/listing' element={<ListingPage />} />
+            <Route path='/booking' element={<BookingPage />} />
+        </Routes>
+
+      </Router>
+      
     </div>
   );
 }
