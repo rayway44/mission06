@@ -24,20 +24,19 @@ jobs:
       - attach_workspace:
           at: .
       - checkout
-      - run: cd mission06 && npm run test
+      - run: cd ./app && npm run test
       - persist_to_workspace:
           root: .
           paths:
             - .
   deploy:
     machine:
-        image: ubuntu-2004:202010-01
+      image: ubuntu-2004:202010-01
     steps:
       - attach_workspace:
           at: .
       - checkout
       - run: aws s3 sync ./app/build s3://mission04bucket-v2
-    
 
 workflows:
   build_test_deploy:
