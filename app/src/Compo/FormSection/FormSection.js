@@ -10,9 +10,7 @@ import {Link} from 'react-router-dom'
 function FormSection() {
 
     const [visible, setVisible] = useState(1);
-    const firstscreen = () => {
-        setVisible(1)
-    }
+    
     const secondscreen = () => {
         setVisible(2)
     }
@@ -63,7 +61,7 @@ function FormSection() {
                     <div className='formsection-checkbox'>
                     <div className='formsection-item'>
                         <input type="checkbox"/>
-                        <label for=""><p className='label-text'>I agree to the <a id='label-link'>terms and conditions</a></p>  </label>
+                        <label for=""><p className='label-text'>I agree to the <a href=' ' id='label-link'>terms and conditions</a></p>  </label>
                         
                     </div>
                     <div className='formsection-item'>

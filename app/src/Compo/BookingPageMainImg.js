@@ -4,7 +4,7 @@ import './BookingPageMainImg.css'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 
-import {useLocation, useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 
 
 
@@ -23,7 +23,7 @@ export default function BookingPageMainImg() {
           setProject(res.data)
           console.log(res.data)  
       })
-  }, [])
+  }, [id])
 
   return (
   <div>

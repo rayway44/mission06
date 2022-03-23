@@ -4,7 +4,7 @@ import './BookingMainPageSectionTwo.css'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 
-import {useLocation, useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 
 import Couch from './couch.png'
 import Bed from './bigbed.png'
@@ -28,7 +28,7 @@ export default function BookingMainPageSectionOne() {
           setProject(res.data)
           console.log(res.data)  
       })
-  }, [])
+  }, [id])
 
 let garage = {
     1 : <div className='booking-main-page-section-two-icon'>

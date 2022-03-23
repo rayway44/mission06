@@ -10,11 +10,6 @@ export default function BookingMainPageSectionOne() {
 
   const [calendar, setCalendar] = useState(new Date());
 
-  const [color, setColor] = useState('times-calendar')
-
-  const colorChange = () => {
-    setColor('times-calendar2')
-  }
 
   return (
     <div id='booking-main-page-section-six'>
