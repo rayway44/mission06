@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './LandingPageBody.css'
 
 
-import { BrowserRouter as Router, Link} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 
 export default function LandingPageBody() {
