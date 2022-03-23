@@ -31,22 +31,22 @@ export default function BookingMainPageSectionOne() {
   }, [])
 
 let garage = {
-    1 : <div class='booking-main-page-section-two-icon'>
-            <div class='booking-main-page-section-two-icon-img'>
+    1 : <div className='booking-main-page-section-two-icon'>
+            <div className='booking-main-page-section-two-icon-img'>
                 <img src={Parking} alt=' '/>
              </div>
-            <div class='booking-main-page-section-two-icon-title'>
+            <div className='booking-main-page-section-two-icon-title'>
         <br/> Garage
     </div>
 </div>
 }
 
 let pet = {
-    1 : <div class='booking-main-page-section-two-icon'>
-            <div class='booking-main-page-section-two-icon-img'>
+    1 : <div className='booking-main-page-section-two-icon'>
+            <div className='booking-main-page-section-two-icon-img'>
                 <img src={Paw} alt=' '/>
             </div>
-            <div class='booking-main-page-section-two-icon-title'>
+            <div className='booking-main-page-section-two-icon-title'>
                 <br/>Pet Friendly
             </div>
         </div>
@@ -57,28 +57,28 @@ let pet = {
     <div id='booking-main-page-section-two'>
       {project.map((ele, index) => (  
         <div id='booking-main-page-section-two-holder'>
-            <div class='booking-main-page-section-two-icon'>
-                <div class='booking-main-page-section-two-icon-img'>
+            <div className='booking-main-page-section-two-icon'>
+                <div className='booking-main-page-section-two-icon-img'>
                     <img src={Bed} alt=' '/>
                 </div>
-                <div class='booking-main-page-section-two-icon-title'>
+                <div className='booking-main-page-section-two-icon-title'>
                     <br/>{ele.bedroom_count} Bedrooms
                 </div>
             </div>
 
-            <div class='booking-main-page-section-two-icon'>
-                <div class='booking-main-page-section-two-icon-img'>
+            <div className='booking-main-page-section-two-icon'>
+                <div className='booking-main-page-section-two-icon-img'>
                     <img src={Bigbath} alt=' ' />
                 </div>
-                <div class='booking-main-page-section-two-icon-title'>
+                <div className='booking-main-page-section-two-icon-title'>
                     <br/>{ele.bathroom_count} Bathrooms
                 </div>
             </div>
-            <div class='booking-main-page-section-two-icon'>
-                <div class='booking-main-page-section-two-icon-img'>
+            <div className='booking-main-page-section-two-icon'>
+                <div className='booking-main-page-section-two-icon-img'>
                     <img src={Couch} alt=' '/>
                 </div>
-                <div class='booking-main-page-section-two-icon-title'>
+                <div className='booking-main-page-section-two-icon-title'>
                     <br/>2 Living Rooms
                 </div>
             </div>

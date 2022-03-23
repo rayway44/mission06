@@ -33,22 +33,22 @@ export default function BookingPageNavBar() {
     
 
   return (
-    <div class='booking-page-nav-bar'>
+    <div className='booking-page-nav-bar'>
 
-        <div class='booking-page-nav-bar-left'>
-            <div class='booking-page-nav-icon'>
+        <div className='booking-page-nav-bar-left'>
+            <div className='booking-page-nav-icon'>
                 <img src={Logo} alt='auck'/> 
             </div>
-            <div class='booking-page-nav-icon'>
+            <div className='booking-page-nav-icon'>
                 <a href=' '>Home</a>
             </div>
-            <div class='booking-page-nav-icon'>
+            <div className='booking-page-nav-icon'>
                 <a href=' '>Property Search</a> 
             </div>
-            <div class='booking-page-nav-icon'>
+            <div className='booking-page-nav-icon'>
                 <a href=' '>Property Management</a> 
             </div>
-            <div class='booking-page-nav-icon'>
+            <div className='booking-page-nav-icon'>
                 <Link to='/'>Here</Link>
             </div>
            

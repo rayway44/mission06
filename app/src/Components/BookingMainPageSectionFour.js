@@ -17,10 +17,10 @@ export default function BookingMainPageSectionOne() {
         <div id='booking-main-page-section-four-holder'>
             <div id='booking-main-page-section-four-top'>
               <div id='booking-main-page-section-four-top-holder'>
-                <div class ='booking-main-page-section-four-top-left'>
+                <div className ='booking-main-page-section-four-top-left'>
                 Property Information
                 </div>  
-                <div class ='booking-main-page-section-four-top-right'>
+                <div className ='booking-main-page-section-four-top-right'>
                   Right
                 </div>  
               </div>

@@ -65,7 +65,7 @@ import {
       // mapContainerClassName='map'
     
     return (
-      <div class='map'>
+      <div className='map'>
         
         <GoogleMap
         onLoad={handleOnLoad}
@@ -84,7 +84,7 @@ import {
           >
             {activeMarker === id ? (
               <InfoWindow >
-                <div id='infoWindow' class='infoWindow'>{name}</div>
+                <div id='infoWindow' className='infoWindow'>{name}</div>
               </InfoWindow>
             ) : null}
           </Marker>

@@ -36,7 +36,7 @@ export default function BookingMainPageSectionOne() {
             
         <div id="booking-main-page-section-one-holder">
            
-                    <div class='booking-main-page-section-one-left'>
+                    <div className='booking-main-page-section-one-left'>
                 
                     <div id='booking-main-page-section-one-left-top'>
                     
@@ -55,18 +55,18 @@ export default function BookingMainPageSectionOne() {
                     </div>
                 </div>
     
-                <div class='booking-main-page-section-one-right'>
+                <div className='booking-main-page-section-one-right'>
                     <div id='booking-main-page-section-one-right-top'>
-                        <span class='booking-main-page-section-one-right-top-price'>
+                        <span className='booking-main-page-section-one-right-top-price'>
                             ${ele.price}
                         </span>
                         / week
                     </div>
                     <div id='booking-main-page-section-one-right-bottom'>
-                        <div class='booking-main-page-section-one-right-bottom-btn1'>
+                        <div className='booking-main-page-section-one-right-bottom-btn1'>
                             Book a viewing 
                         </div>
-                        <div class='booking-main-page-section-one-right-bottom-btn2'>
+                        <div className='booking-main-page-section-one-right-bottom-btn2'>
                             Virtual Tour
                         </div>
                     </div>
