@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import './Listing.css'
 import {useState, useEffect} from 'react'
+import {useLocation} from 'react-router-dom'
 
 import Dogpaw from './dogpaw.png'
 import Bedroom from './Bedroom.png'
@@ -13,19 +14,57 @@ import {Link} from 'react-router-dom'
 
 function Listing() {
 
-    
+    console.log('LISTINGS PAGE HIT')
 
 
-  const [project, setProject] = useState([])
+    // grabs search params from URL
+    const {search} = useLocation()
+    const searchParams = new URLSearchParams(search)
 
-  useEffect(() => {
-      axios.get(`http://localhost:5000/find`)
-      .then(res => {
-  
-          setProject(res.data)
-          console.log(res.data)  
-      })
-  }, [])
+    const property = searchParams.get('property')
+    const city = searchParams.get('city')
+    const suburb = searchParams.get('suburb')
+    const rent = searchParams.get('rent')
+    const bedroom = searchParams.get('bedroom')
+    const bathroom = searchParams.get('bathroom')
+    const pet = searchParams.get('pet')
+    const smoker = searchParams.get('smoker')
+
+
+    console.log(`
+    - property: ${property} 
+    - city: ${city} 
+    - price: ${rent}
+    - bed: ${bedroom}
+    - bathroom: ${bathroom}
+    - suburb: ${suburb}
+    - smoker: ${smoker}
+    - pet: ${pet}`)
+
+    // const query = name + age 
+    const querySearch = `http://localhost:5000/booking/${property}/${city}/${suburb}/${rent}/${bedroom}/${bathroom}/${pet}/${smoker}`
+
+    // axios.get(`http://localhost:5000/booking/${property}/${city}/${suburb}/${rent}/${bedroom}/${bathroom}/${pet}/${smoker}`)
+    // .then(res => {
+    //     const result = res
+    //     console.log(result)
+    //     console.log("HITTING QUERY END POINT")
+
+    // })
+
+
+    // =========================================================================
+
+        const [project, setProject] = useState([])
+
+        useEffect(() => {
+            axios.get(querySearch)
+            .then(res => {
+        
+                setProject(res.data)
+                // console.log(res.data)  
+            })
+        }, [])
 
 // const quickSort = () => {
 //     if (project == null) return []
@@ -33,12 +72,10 @@ function Listing() {
 //     let pivot  = project_address[0], left = [], right 
 // }
 
-
- 
-  let pet = {
+  
+  let dog = {
       1: <div id='pets'> <img src={Dogpaw} alt=''/> Pet Friendly </div>
   }
-
 
   return (
     <div>
@@ -79,7 +116,7 @@ function Listing() {
                                 <div className='card-info'>
                             
                                     <div id='com-events'><img src={Bbq} alt=''/>There are community events</div>
-                                    <div >{pet[ele.pet_friendly]}</div>
+                                    <div >{dog[ele.pet_friendly]}</div>
 
                                     <div id='price'>$ {ele.price} /pw</div>
                                 

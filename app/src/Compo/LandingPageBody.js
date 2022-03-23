@@ -7,18 +7,18 @@ export default function LandingPageBody() {
     const [bedroom, setBedroom] = useState(1)
     const [bathroom, setBathroom] = useState(1)
 
-    const [property, setProperty] = useState('House')
-    const [suburb, setSuburb] = useState('Epsom')
+    const [property, setProperty] = useState('All')
+    const [suburb, setSuburb] = useState('City Centre')
     const [city, setCity] = useState('Auckland City')
-    const [rent, setRent] = useState('800')
+    const [rent, setRent] = useState('900')
     
-    const [pet, setPet] = useState()
-    const [smoker, setSmoker] = useState()
-    
-    const link = `/listing?property=${property}&city=${city}&suburb=${suburb}&rent=${rent}&bedroom=${bedroom}&bathroom=${bathroom}&pet=${pet}&smoker=${smoker}`
- 
-    
-    function bedroomCountAdd(){
+    const [pet, setPet] = useState(0)
+    const [smoker, setSmoker] = useState(false)
+
+
+    let link = `/listing?property=${property}&city=${city}&suburb=${suburb}&rent=${rent}&bedroom=${bedroom}&bathroom=${bathroom}&pet=${pet}&smoker=${smoker}`
+
+    function bedroomCountAdd(){     
         
         if(bedroom <= 3){
             setBedroom(bedroom + 1)
@@ -75,19 +75,21 @@ export default function LandingPageBody() {
                         <div className='landing-page-body-line-1'>
                             Property Type:<br/>
                             <select className='dropdown' id='property_type' onChange={e => setProperty(e.target.value)}>        
-                                <option id='one' value='House'>All</option>
+                                <option id='one' value='All'>All</option>
                                 <option id='one' value='House' >House</option>
                                 <option id='two' value='Townhouse' >Townhouse</option>
+                                <option id='two' value='Apartment' >Apartment</option>
                             </select>
                         </div>
 
                         <div className='landing-page-body-line-1'>
                             Location:<br/>
                             <select className='dropdown' id='city' onChange={e => setCity(e.target.value)} >
-                                <option id='one' value='Auckland City'>All Districts</option>
+                                <option id='one' value='All '>All Districts</option>
                                 <option id='four' value='Auckland City'>Auckland City</option>
                                 <option id='one' value='North Shore City'>North Shore City</option>
                                 <option id='three' value='Manukau City'>Manukau City</option>
+                                <option id='three' value='Waitakere City'>Waitakere City</option>
                             </select>
                         </div>
 
@@ -97,6 +99,7 @@ export default function LandingPageBody() {
                                 <option id='one' value='Epsom'>All Suburbs</option>
                                 <option id='one' value='City Centre'>City Centre</option>
                                 <option id='two' value='Epsom'>Epsom</option> 
+                                <option id='two' value='Henderson'>Henderson</option> 
                             </select>
                         </div>
                     </div>
@@ -167,7 +170,7 @@ export default function LandingPageBody() {
 
                                     <div 
                                     className='landing-page-body-search-btn' >
-                                    <Link to={link}>Bookings</Link>
+                                    <Link to={link} onC>Bookings</Link>
                                 
                                     </div>
 

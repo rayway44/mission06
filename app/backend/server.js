@@ -57,13 +57,13 @@ router.get('/',(req,res) => {
             })
 })
 
-
-
+router.get('/test',(req,res) => {
+    res.send('have hit test end point')
+})
 
 // Backend API from LandingPage <<<<    
-app.get('/booking/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker', (req, res) => {
+router.get('/booking/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker', (req, res) => {
     
-
             const property = req.params.property
             const city = req.params.city
             const suburb = req.params.suburb
@@ -84,16 +84,26 @@ app.get('/booking/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker'
             - smoker:${smoker}`
             
             console.log(query)
+            // {property_type: Apartment ,city: {$lte:city},suburb: suburb,price:{$lte:rent}}
+                    
+                    if(property === 'All'){
 
-                    documentPull.find({property_type: property ,city: city ,price:{$lte:rent}}).sort({price:-1})
-                    .then((result) => {
-                        console.log(result)
-                        res.send(result)
-                    })
-                    .catch(err => { 
-                        console.log(err)
-                    })
-
+                        documentPull.find({})
+                        .then((result) => {
+                            // console.log(result)
+                            res.send(result)
+                        })
+                    }  else {
+                        documentPull.find({property_type: property ,city: city,suburb: suburb,price:{$lte:rent}})
+                        .then((result) => {
+                            // console.log(result)
+                            res.send(result)
+                        })
+                        .catch(err => { 
+                            console.log(err)
+                        })
+                    }
+                    
 })
 
 // Postman Testing endpoint
