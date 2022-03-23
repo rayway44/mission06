@@ -16,7 +16,7 @@ export default function BookingMainPageSectionOne() {
 
                 <div id='booking-main-page-section-one-left-bottom'>
                     <div id='booking-main-page-section-one-left-bottom-left'>
-                        <img src='images/geolocation.png' />
+                        <img src='images/geolocation.png' alt=' ' />
                     </div>
                     <div id='booking-main-page-section-one-left-bottom-right'>
                         Congue tellus sed venenatis magna eu euismod etiam nisl. Pulvinar purus<br/> urna orci blandit vestibulum accumsan, nec convallis.

@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+
 import './App.css';
 import LandingPage from './LandingPage'
 import BookingPage from './BookingPage'
 import Hitter from './Hitter'
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 
 function App() {

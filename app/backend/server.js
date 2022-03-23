@@ -82,14 +82,14 @@ app.get('/booking/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker'
             
             console.log(query)
 
-                    // documentPull.find({property_type: property ,city: city ,price:{$lte:rent}}).sort({price:-1})
-                    // .then((result) => {
-                    //     console.log(result)
-                    //     res.send(result)
-                    // })
-                    // .catch(err => { 
-                    //     console.log(err)
-                    // })
+                    documentPull.find({property_type: property ,city: city ,price:{$lte:rent}}).sort({price:-1})
+                    .then((result) => {
+                        console.log(result)
+                        res.send(result)
+                    })
+                    .catch(err => { 
+                        console.log(err)
+                    })
 
 })
 

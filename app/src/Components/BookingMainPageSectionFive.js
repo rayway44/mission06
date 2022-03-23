@@ -5,7 +5,7 @@ export default function BookingMainPageSectionOne() {
   return (
     <div id='booking-main-page-section-five'>
         <div id='booking-main-page-section-five-holder'>
-            <img src='images/section-five-img.png'/>
+            <img src='images/section-five-img.png' alt=' '/>
         </div>
     </div>
   )

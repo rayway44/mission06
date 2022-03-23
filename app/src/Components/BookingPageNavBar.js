@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './BookingPageNavBar.css'
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Link, useLocation } from 'react-router-dom'
 import axios from 'axios'
 
 export default function BookingPageNavBar() {
@@ -38,13 +38,13 @@ export default function BookingPageNavBar() {
                 <img src='images/auckland-property-management-white.png' alt='auck'/> 
             </div>
             <div class='booking-page-nav-icon'>
-                <a href=''>Home</a>
+                <a href=' '>Home</a>
             </div>
             <div class='booking-page-nav-icon'>
-                <a href=''>Property Search</a> 
+                <a href=' '>Property Search</a> 
             </div>
             <div class='booking-page-nav-icon'>
-                <a href=''>Property Management</a> 
+                <a href=' '>Property Management</a> 
             </div>
             <div class='booking-page-nav-icon'>
                 <Link to='/'>Here</Link>
@@ -56,17 +56,17 @@ export default function BookingPageNavBar() {
 
         <div class='booking-page-nav-bar-right'>
             <div class='booking-page-nav-icon'>
-                <a href=''>About</a> 
+                <a href=' '>About</a> 
             </div>
             
             <div class='booking-page-nav-icon'>
-                <a href=''>Contact Us</a> 
+                <a href=' '>Contact Us</a> 
             </div>
             <div class='booking-page-nav-icon'>
-                <a href=''>icon</a> 
+                <a href=' '>icon</a> 
             </div>
             <div class='booking-page-nav-icon'>
-                <a href=''>icon</a> 
+                <a href=' '>icon</a> 
             </div>
 
         </div>

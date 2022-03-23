@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import './LandingPageBody.css'
-import axios from 'axios'
 
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+
+import { BrowserRouter as Router, Link} from 'react-router-dom'
 
 
 export default function LandingPageBody() {
@@ -15,8 +15,8 @@ export default function LandingPageBody() {
     const [city, setCity] = useState('Auckland City')
     const [rent, setRent] = useState('800')
     
-    const [pet, setPet] = useState(false)
-    const [smoker, setSmoker] = useState(false)
+    const [pet, setPet] = useState()
+    const [smoker, setSmoker] = useState()
     
     const link = `/booking?property=${property}&city=${city}&suburb=${suburb}&rent=${rent}&bedroom=${bedroom}&bathroom=${bathroom}&pet=${pet}&smoker=${smoker}`
  
