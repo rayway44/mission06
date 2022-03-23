@@ -1,40 +1,72 @@
 import React from 'react'
 import './BookingPageNavBar.css'
+import { Link, useLocation } from 'react-router-dom'
+import axios from 'axios'
 
 export default function BookingPageNavBar() {
+
+    // grabs search params from URL
+    const {search} = useLocation()
+    const searchParams = new URLSearchParams(search)
+
+    const property = searchParams.get('property')
+    const city = searchParams.get('city')
+    const suburb = searchParams.get('suburb')
+    const rent = searchParams.get('rent')
+    const bedroom = searchParams.get('bedroom')
+    const bathroom = searchParams.get('bathroom')
+    const pet = searchParams.get('pet')
+    const smoker = searchParams.get('smoker')
+
+
+    console.log(`${property} - ${city} - ${suburb}`)
+
+    // const query = name + age 
+
+    axios.get(`http://localhost:5000/booking/${property}/${city}/${suburb}/${rent}/${bedroom}/${bathroom}/${pet}/${smoker}`)
+    .then(res => {
+        const result = res
+        console.log(result)
+    })
+    
+
   return (
     <div class='booking-page-nav-bar'>
 
         <div class='booking-page-nav-bar-left'>
             <div class='booking-page-nav-icon'>
-                <img src='images/auckland-property-management-white.png' /> 
+                <img src='images/auckland-property-management-white.png' alt='auck'/> 
             </div>
             <div class='booking-page-nav-icon'>
-                <a href=''>Home</a> 
+                <a href=' '>Home</a>
             </div>
             <div class='booking-page-nav-icon'>
-                <a href=''>Property Search</a> 
+                <a href=' '>Property Search</a> 
             </div>
             <div class='booking-page-nav-icon'>
-                <a href=''>Property Management</a> 
+                <a href=' '>Property Management</a> 
+            </div>
+            <div class='booking-page-nav-icon'>
+                <Link to='/'>Here</Link>
             </div>
            
         </div>
+                
 
 
         <div class='booking-page-nav-bar-right'>
             <div class='booking-page-nav-icon'>
-                <a href=''>About</a> 
+                <a href=' '>About</a> 
             </div>
             
             <div class='booking-page-nav-icon'>
-                <a href=''>Contact Us</a> 
+                <a href=' '>Contact Us</a> 
             </div>
             <div class='booking-page-nav-icon'>
-                <a href=''>icon</a> 
+                <a href=' '>icon</a> 
             </div>
             <div class='booking-page-nav-icon'>
-                <a href=''>icon</a> 
+                <a href=' '>icon</a> 
             </div>
 
         </div>

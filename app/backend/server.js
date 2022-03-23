@@ -1,11 +1,17 @@
 const express = require('express')
 const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
+const cors = require('cors')   
+
 const router = express.Router()
 
+
 const app = express()
+
 const port = 5000 //CHANGE: What port would you like to run 
 
+app.use(express.json())
+app.use(cors())
 
         // Name of DATABASE you are trying to access
         const database = `property`
@@ -50,6 +56,75 @@ router.get('/',(req,res) => {
                 console.log(err)
             })
 })
+
+
+
+
+// Backend API from LandingPage <<<<    
+app.get('/booking/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker', (req, res) => {
+    
+
+            const property = req.params.property
+            const city = req.params.city
+            const suburb = req.params.suburb
+            const rent = req.params.rent
+            const bedroom = req.params.bedroom
+            const bathroom = req.params.bathroom
+            const pet = req.params.pet
+            const smoker = req.params.smoker
+
+            const query = `your query is 
+            - Property:${property}
+            - city:${city}
+            - suburb:${suburb}
+            - rent:${rent}
+            - bedroom:${bedroom}
+            - bathroom:${bathroom} 
+            - pet:${pet}
+            - smoker:${smoker}`
+            
+            console.log(query)
+
+                    documentPull.find({property_type: property ,city: city ,price:{$lte:rent}}).sort({price:-1})
+                    .then((result) => {
+                        console.log(result)
+                        res.send(result)
+                    })
+                    .catch(err => { 
+                        console.log(err)
+                    })
+
+})
+
+// Postman Testing endpoint
+app.get('/hit',(req,res) => {
+
+            const property = 'House'
+            const city = "Auckland City"
+            const suburb = ""
+            const bedroom = 1
+            const rent = '800'
+
+            const query = `your query is - Property:${property}
+            - city:${city}
+            - suburb:${suburb}
+            - rent:${rent}
+            - bedroom:${bedroom}`
+            
+            console.log(query)
+
+            const query01 = {property_type: property ,city: city ,suburb:suburb}
+
+            documentPull.find({property_type: property ,city: city ,price:{$lte:rent}})
+            .then((result) => {
+                res.send(result)
+            })
+            .catch(err => { 
+                console.log(err)
+            })
+})
+
+
 
 // SEARCH: Here is where you can write your SEARCH QUERIES
 router.get('/find',(req,res) => {

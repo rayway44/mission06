@@ -8,7 +8,7 @@ export default function BookingPageMainImg() {
       <div id='booking-page-footer-holder'>
         <div class='booking-page-footer-line1'>
           <div class='booking-page-footer-line1-left'>
-              <img src='images/auckland-property-management.png' />
+              <img src='images/auckland-property-management.png' alt=' '/>
           </div>
           <div class='booking-page-footer-line1-right'>
               <div class='booking-page-footer-line1-btn1'>

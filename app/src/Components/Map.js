@@ -1,12 +1,11 @@
 
 import { 
-    useLoadScript,
     GoogleMap,
     Marker,
     InfoWindow,
   } from '@react-google-maps/api'
   
-  import {useEffect, useRef, useState} from 'react'
+  import {useState} from 'react'
   
   import './Map.css'
   
@@ -14,7 +13,7 @@ import {
   export default function Map() {
     const google = window.google; //DO NOT DELETE
     // const API_KEY = `AIzaSyCTguzByLKCcv6eVpbBmb78PGJlK5_f07M`
-    const uluru = { lat: -25.344, lng: 131.036 };
+    
   
     const auckland = {lat: -36.8469154, lng: 174.7417116};
     const propertyOne = { lat: -36.8469154, lng: 174.7417116 };

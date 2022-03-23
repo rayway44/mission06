@@ -4,6 +4,7 @@ import BookingPage from './BookingPage'
 import ListingPage from './ListingPage';
 import LandingPage from './LandingPage'
 
+
 import React from "react";
 
 import {
@@ -12,9 +13,11 @@ import {
   Route,
 } from "react-router-dom";
 
+
 function App() {
   return (
     <div class='App'>
+
       <Router>
         <Routes>
             <Route path='/' element={<LandingPage />} />

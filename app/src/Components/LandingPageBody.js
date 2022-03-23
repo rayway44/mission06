@@ -1,9 +1,63 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './LandingPageBody.css'
-
 import { Link} from 'react-router-dom'
 
 export default function LandingPageBody() {
+
+    const [bedroom, setBedroom] = useState(1)
+    const [bathroom, setBathroom] = useState(1)
+
+    const [property, setProperty] = useState('House')
+    const [suburb, setSuburb] = useState('Epsom')
+    const [city, setCity] = useState('Auckland City')
+    const [rent, setRent] = useState('800')
+    
+    const [pet, setPet] = useState()
+    const [smoker, setSmoker] = useState()
+    
+    const link = `/listing?property=${property}&city=${city}&suburb=${suburb}&rent=${rent}&bedroom=${bedroom}&bathroom=${bathroom}&pet=${pet}&smoker=${smoker}`
+ 
+    // ==============================
+    function bedroomCountAdd(){
+        
+        if(bedroom <= 3){
+            setBedroom(bedroom + 1)
+        } else {
+            setBedroom(4)
+        }
+            
+    }
+
+    function bedroomCountSubtract(){
+        
+        if(bedroom <= 2){
+            setBedroom(1)
+        } else {
+            setBedroom(bedroom - 1)
+        }
+        
+    }
+
+    function bathroomCountAdd(){
+        
+        if(bathroom <= 3){
+            setBathroom(bathroom + 1)
+        } else {
+            setBathroom(4)
+        }
+    }
+
+    function bathroomCountSubtract(){
+        
+        
+        if(bathroom <= 2){
+            setBathroom(1)
+        } else {
+            setBathroom(bathroom - 1)
+        }
+    
+    }
+
 
 
   return (
@@ -20,34 +74,29 @@ export default function LandingPageBody() {
                     <div class='landing-page-body-line-holder'>
                         <div class='landing-page-body-line-1'>
                             Property Type:<br/>
-                            <select class='dropdown' id='bedroomsMin'>
-                                <option id='one' value='20000'>All</option>
-                                <option id='one' value='400000'>one</option>
-                                <option id='two' value='500000'>two</option>
-                                <option id='three' value='700000'>three</option>
-                                <option id='four' value='1600000'>four</option>
+                            <select class='dropdown' id='property_type' onChange={e => setProperty(e.target.value)}>        
+                                <option id='one' value='House'>All</option>
+                                <option id='one' value='House' >House</option>
+                                <option id='two' value='Townhouse' >Townhouse</option>
                             </select>
                         </div>
 
                         <div class='landing-page-body-line-1'>
                             Location:<br/>
-                            <select class='dropdown' id='bedroomsMin'>
-                                <option id='one' value='20000'>All Districts</option>
-                                <option id='one' value='400000'>one</option>
-                                <option id='two' value='500000'>two</option>
-                                <option id='three' value='700000'>three</option>
-                                <option id='four' value='1600000'>four</option>
+                            <select class='dropdown' id='city' onChange={e => setCity(e.target.value)} >
+                                <option id='one' value='Auckland City'>All Districts</option>
+                                <option id='four' value='Auckland City'>Auckland City</option>
+                                <option id='one' value='North Shore City'>North Shore City</option>
+                                <option id='three' value='Manukau City'>Manukau City</option>
                             </select>
                         </div>
 
                         <div class='landing-page-body-line-1'>
                             <br/>
-                            <select class='dropdown' id='bedroomsMin'>
-                                <option id='one' value='20000'>All Suburbs</option>
-                                <option id='one' value='400000'>one</option>
-                                <option id='two' value='500000'>two</option>
-                                <option id='three' value='700000'>three</option>
-                                <option id='four' value='1600000'>four</option>
+                            <select class='dropdown' id='suburb' onChange={e => setSuburb(e.target.value)}>
+                                <option id='one' value='Epsom'>All Suburbs</option>
+                                <option id='one' value='City Centre'>City Centre</option>
+                                <option id='two' value='Epsom'>Epsom</option> 
                             </select>
                         </div>
                     </div>
@@ -57,45 +106,30 @@ export default function LandingPageBody() {
 
                         <div class='landing-page-body-line-1'>
                             Rent Per Week<br/>
-                            <select class='dropdown' id='bedroomsMin'>
-                                <option id='one' value='20000'>Minimum</option>
-                                <option id='one' value='400000'>one</option>
-                                <option id='two' value='500000'>two</option>
-                                <option id='three' value='700000'>three</option>
-                                <option id='four' value='1600000'>four</option>
-                            </select>
-                        </div>
-
-                        <div class='landing-page-body-line-1'>
-                            <br/>
-                            -
-                        </div>
-
-                        <div class='landing-page-body-line-1'>
-                            <br/>
-                            <select class='dropdown' id='bedroomsMin'>
+                            <select class='dropdown' id='maximumRent' onChange={e => setRent(e.target.value)}>
                                 <option id='one' value='20000'>Maximum</option>
-                                <option id='one' value='400000'>one</option>
-                                <option id='two' value='500000'>two</option>
-                                <option id='three' value='700000'>three</option>
-                                <option id='four' value='1600000'>four</option>
+                                <option id='one' value='600'>up to $600</option>
+                                <option id='two' value='700'>up to $700</option>
+                                <option id='three' value='800'>up to $800</option>
+                                <option id='four' value='900'>up to $900</option>
                             </select>
                         </div>
+
                         
                         <div class='landing-page-body-line-1'>
                             Bedrooms:<br/>
                             <div class='landing-page-body-line-1-btn'>
-                                <div class='landing-page-body-line-1-minus'>-</div>
-                                <div class='landing-page-body-line-1-box'>12</div>
-                                <div class='landing-page-body-line-1-add'>+</div>
+                                <div class='landing-page-body-line-1-minus' onClick={bedroomCountSubtract}>-</div>
+                                <div class='landing-page-body-line-1-box'>{bedroom}</div>
+                                <div class='landing-page-body-line-1-add' onClick={bedroomCountAdd}>+</div>
                             </div>
                         </div>
                         <div class='landing-page-body-line-1'>
                             Bathrooms:<br/>
                             <div class='landing-page-body-line-1-btn'>
-                                <div class='landing-page-body-line-1-minus'>-</div>
-                                <div class='landing-page-body-line-1-box'>12</div>
-                                <div class='landing-page-body-line-1-add'>+</div>
+                                <div class='landing-page-body-line-1-minus' onClick={bathroomCountSubtract}>-</div>
+                                <div class='landing-page-body-line-1-box'>{bathroom}</div>
+                                <div class='landing-page-body-line-1-add' onClick={bathroomCountAdd}>+</div>
                             </div>
                         </div>
 
@@ -112,18 +146,23 @@ export default function LandingPageBody() {
                     <div class='landing-page-body-line-holder-bottom'>
                         <div class='landing-page-body-line-bottom-left'>
                             <div class='landing-page-body-line-1'>
-                                Pets Ok <input type='radio'></input>
+                                Pets Ok <input type='checkbox' onChange={e => setPet(e.target.checked)}></input>
                             </div>
                             <div class='landing-page-body-line-1'>
-                                Smokers <input type='radio'></input>
+                                Smokers <input type='checkbox' onChange={e => setSmoker(e.target.checked)}></input>
                             </div>
                         </div>
 
                         <div class='landing-page-body-line-bottom-right'>
                             <div class='landing-page-body-line-1'>
-                                <Link to={'/listing'}>
-                                <div class='landing-page-body-search-btn'>Search</div>
-                                </Link>
+
+                                    <div class='landing-page-body-search-btn' >
+                                    <Link to={link}>Bookings</Link>
+                                
+                                    </div>
+
+                               
+
                             </div>
                         </div>
                     </div>
