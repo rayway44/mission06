@@ -5,13 +5,10 @@ const cors = require('cors')
 
 const router = express.Router()
 
-
-const app = express()
-
 const port = 5000 //CHANGE: What port would you like to run 
 
-app.use(express.json())
-app.use(cors())
+router.use(express.json())
+router.use(cors())
 
         // Name of DATABASE you are trying to access
         const database = `property`
@@ -45,16 +42,23 @@ app.use(cors())
 
 
 // Listing all DOCUMENTS from database - DO NOT CHANGE
-router.get('/',(req,res) => {
+router.get('/', (req,res) => {
 
-            documentPull.find({})
+    res.send('you hit / END POINT')
+    
+})
+
+router.get('/test',(req,res) => {
+
+    documentPull.find({})
             .then((result) => {
-                console.log(result)
+                console.log('youve hit / end point')
                 res.send(result)
             })
             .catch(err => { 
                 console.log(err)
             })
+           
 })
 
 router.get('/load',(req,res) => {
@@ -68,6 +72,7 @@ router.get('/load',(req,res) => {
 router.get('/listing/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker', (req, res) => {
     
             const property = req.params.property
+            const city = req.params.city
             
             const suburb = req.params.suburb
             const rent = req.params.rent
@@ -75,12 +80,14 @@ router.get('/listing/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smok
             const bathroom = req.params.bathroom
                     
                     if(property === 'All'){
+                        
+                                documentPull.find({})
+                                .then((result) => {
+                                    // console.log(result)
+                                    res.send(result)
+                                })
+                            
 
-                        documentPull.find({})
-                        .then((result) => {
-                            // console.log(result)
-                            res.send(result)
-                        })
                     }  else {
                         documentPull.find({property_type: property ,city: city,suburb: suburb,price:{$lte:rent}})
                         .then((result) => {
@@ -95,7 +102,7 @@ router.get('/listing/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smok
 })
 
 // Postman Testing endpoint
-app.get('/hit',(req,res) => {
+router.get('/hit',(req,res) => {
 
             const property = 'House'
             const city = "Auckland City"
@@ -149,8 +156,6 @@ router.get('/find/:listing_id',(req,res) => {
     .catch(err => { 
         console.log(err)
     })
-
-
 
 })
 

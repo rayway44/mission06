@@ -29,15 +29,15 @@ function Listing() {
     const smoker = searchParams.get('smoker')
 
 
-    console.log(`
-    - property: ${property} 
-    - city: ${city} 
-    - price: ${rent}
-    - bed: ${bedroom}
-    - bathroom: ${bathroom}
-    - suburb: ${suburb}
-    - smoker: ${smoker}
-    - pet: ${pet}`)
+    // console.log(`
+    // - property: ${property} 
+    // - city: ${city} 
+    // - price: ${rent}
+    // - bed: ${bedroom}
+    // - bathroom: ${bathroom}
+    // - suburb: ${suburb}
+    // - smoker: ${smoker}
+    // - pet: ${pet}`)
 
     // const query = name + age 
     // const querySearch = `http://localhost:5000/listing/${property}/${city}/${suburb}/${rent}/${bedroom}/${bathroom}/${pet}/${smoker}`
@@ -79,9 +79,10 @@ function Listing() {
       1: <div id='pets'> <img src={Dogpaw} alt=''/> Pet Friendly </div>
   }
 
-  return (
+
+    return (
     <div>
-       <div className='listing-filter-container'>
+        <div className='listing-filter-container'>
             <div id='filter-results'>showing all results</div>
 
             <div id='filter-buttons-container'>
@@ -134,26 +135,15 @@ We couldn't find anything matching your search. You could broaden your search by
                                 
                                 
                                 </div>
-                                
-                            
-                           
-
-                            
                             </div>
-                            
-                            
-                            
-                            
                         </div>
                         </Link>
                     ))}
                     
                 </div>
-            
-        
         </div>
     </div>
-  )
+    )
 }
 
 export default Listing

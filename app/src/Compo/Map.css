@@ -25,13 +25,22 @@
   font-size:20px;
 }
 
-.infoWindow{
-  /* min-width:140px;
-  min-height:140px; */
-  color: black;
-  font-size:20px;
-}
+/* STYLING FOR INFO WINDO HERE */
+
 
 #infoWindow{
-  border: 12px solid red;
+  /* border: 12px solid green; */
+  width: 600px;
+  font-size:20px;
+  text-align: center;
+}
+
+.info-styling img{
+  /* border: 2px solid red; */
+  border-radius: 10px;
+  width: 300px;
+}
+
+.info-window-title{
+  font-weight: bold;
 }
