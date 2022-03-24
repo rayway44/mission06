@@ -134,7 +134,7 @@ router.get('/hit',(req,res) => {
 // SEARCH: Here is where you can write your SEARCH QUERIES
 router.get('/find',  (req,res) => {
    
-    documentPull.find({}).limit(3)
+    documentPull.find({}).limit(20)
     .then(result => {
         res.send((result))
         console.log(result)
