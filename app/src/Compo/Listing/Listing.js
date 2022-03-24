@@ -40,13 +40,13 @@ function Listing() {
     - pet: ${pet}`)
 
     // const query = name + age 
-    const querySearch = `http://localhost:5000/listing/${property}/${city}/${suburb}/${rent}/${bedroom}/${bathroom}/${pet}/${smoker}`
+    // const querySearch = `http://localhost:5000/listing/${property}/${city}/${suburb}/${rent}/${bedroom}/${bathroom}/${pet}/${smoker}`
 
     const [project, setProject] = useState([])
     const [visible, setVisible] = useState(1);
   
     useEffect(() => {
-        axios.get(querySearch)
+        axios.get(`http://localhost:5000/listing/${property}/${city}/${suburb}/${rent}/${bedroom}/${bathroom}/${pet}/${smoker}`)
         .then(res => {
            
             setProject(res.data)
