@@ -53,7 +53,7 @@ function Listing() {
             setVisible(2)
             console.log(res.data)  
         })
-    }, [])
+    }, [property,city,suburb,rent,bedroom,bathroom,pet,smoker])
 
   const quicksort = (list) => {
     if (list.length < 2) {
