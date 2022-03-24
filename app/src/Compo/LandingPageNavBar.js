@@ -12,6 +12,7 @@ export default function LandingPageNavBar() {
                 <div className='landing-page-nav-bar-left'>
                     <div className='landing-page-nav-icon'>
                         <img src='images/auckland-property-management.png' alt=' ' /> 
+                        
                     </div>
                     <div className='landing-page-nav-icon'>
                         <a href=' '>Home</a> 

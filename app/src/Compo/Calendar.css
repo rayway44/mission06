@@ -7,11 +7,12 @@
   height: 640px;
   /* max-width: 100%; */
   background: white;
-  border: 1px solid black;
+  border: 1px solid rgba(235, 235, 235, 1);
   font-family: "Poppins", sans-serif;
   /* font-size:30px; */
   line-height: 20px;
   border-radius: 10px;
+  box-shadow: 2px 2px 10px 4px rgba(235, 235, 235, 1);
 }
 .react-calendar--doubleView {
   width: 700px;

@@ -15,7 +15,7 @@ export default function BookingPageMainImg() {
                   Ready to get started ?
               </div>
               <div className='booking-page-footer-line1-btn2'>
-                  Sign up
+                  Sign up 
               </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function BookingPageMainImg() {
             <div className='booking-page-footer-line3-holder-icon'>
               icon two
             </div>
-            <div>
+            <div className='booking-page-footer-line3-holder-icon'>
             icon one
             </div>
           </div>
