@@ -207,3 +207,35 @@
   width: 19px;
   margin-right: 5px;
 }
+
+#listing-booknow {
+  height: 50px;
+  width: 250px;
+  border-radius: 50px;
+  background-color: #bc243d;
+  border: none;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.no-listing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 300px;
+  width: 876px;
+
+  /* border: 1px solid red; */
+}
+
+#no-listing-text {
+  height: 120px;
+  width: 600px;
+
+  font-size: 24px;
+
+  /* border: 1px solid red; */
+}

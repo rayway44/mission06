@@ -8,14 +8,14 @@ export default function LandingPageBody() {
     const [bathroom, setBathroom] = useState(1)
 
     const [property, setProperty] = useState('House')
-    const [suburb, setSuburb] = useState('Epsom')
-    const [city, setCity] = useState('Auckland City')
-    const [rent, setRent] = useState('800')
+    const [suburb, setSuburb] = useState('Hillcrest')
+    const [city, setCity] = useState('AucklandCity')
+    const [rent, setRent] = useState('810')
     
     const [pet, setPet] = useState()
     const [smoker, setSmoker] = useState()
     
-    const link = `/listing?property=${property}&city=${city}&suburb=${suburb}&rent=${rent}&bedroom=${bedroom}&bathroom=${bathroom}&pet=${pet}&smoker=${smoker}`
+    const link = `/listing/${property}/${suburb}/${rent}/${bedroom}/${bathroom}`
  
     
     function bedroomCountAdd(){

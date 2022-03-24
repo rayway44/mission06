@@ -61,31 +61,22 @@ router.get('/',(req,res) => {
 
 
 // Backend API from LandingPage <<<<    
-app.get('/booking/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker', (req, res) => {
+router.get('/listing/:property/:suburb/:rent/:bedroom/:bathroom', (req, res) => {
     
 
             const property = req.params.property
-            const city = req.params.city
+            
             const suburb = req.params.suburb
             const rent = req.params.rent
             const bedroom = req.params.bedroom
             const bathroom = req.params.bathroom
-            const pet = req.params.pet
-            const smoker = req.params.smoker
-
-            const query = `your query is 
-            - Property:${property}
-            - city:${city}
-            - suburb:${suburb}
-            - rent:${rent}
-            - bedroom:${bedroom}
-            - bathroom:${bathroom} 
-            - pet:${pet}
-            - smoker:${smoker}`
             
-            console.log(query)
+          const bedroomHolder =  parseInt(bedroom)
+          const bathroomHolder = parseInt(bathroom)
+            
+            console.log(property, suburb, rent, bedroom, bathroom)
 
-                    documentPull.find({property_type: property ,city: city ,price:{$lte:rent}}).sort({price:-1})
+                    documentPull.find({property_type: property ,price:{$eq:rent }, suburb: suburb, bedroom_count: bedroomHolder, bathroom_count: bathroomHolder})
                     .then((result) => {
                         console.log(result)
                         res.send(result)
@@ -127,22 +118,48 @@ app.get('/hit',(req,res) => {
 
 
 // SEARCH: Here is where you can write your SEARCH QUERIES
-router.get('/find',(req,res) => {
-
-            const bedroom = req.params.bedroom
-            const priceLow = '890'
-            const priceHigh = '1,475'
-            // 1,475
-
-            documentPull.find({price: {$lte: priceLow}}).limit(10).sort({price:-1})
-            .then((result) => {
-                // console.log(result)
-                res.send(result)
-            })
-            .catch(err => { 
-                console.log(err)
-            })
+router.get('/find',  (req,res) => {
+    // documentPull.find({}).limit(10)
+    // .then((result)) => {
+    //     res.send(result)
+    // } 
+    // const quickSort = array => {
+      
+    //     if (array.length < 2) 
+        
+    //     return array;
     
+    //     // console.log(array.length)
+        
+    //     let pivot = array[0];
+    //     let left  = []; 
+    //     let right = [];
+    //     console.log(pivot)
+    //     for (let i = 1 , total = array.length ; i < total; i++){
+    //       if (array[i] < pivot) 
+    //         left.push(array[i]);
+    //        else 
+    //         right.push(array[i]); 
+    //     }
+    //     return  [
+    //       ...quickSort(left), 
+    //       pivot, 
+    //       ...quickSort(right)
+    
+    //     ];
+        
+    //   };
+
+    
+      
+       
+    // const result = quicksort(filteredData) 
+    // res.send(result) 
+    documentPull.find({}).limit(3)
+    .then(result => {
+        res.send((result))
+        console.log(result)
+    })
 
 
 })

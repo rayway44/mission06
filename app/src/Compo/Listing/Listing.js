@@ -13,26 +13,66 @@ import {Link} from 'react-router-dom'
 
 function Listing() {
 
-    
-
-
   const [project, setProject] = useState([])
+  const [visible, setVisible] = useState(1);
 
   useEffect(() => {
       axios.get(`http://localhost:5000/find`)
       .then(res => {
-  
+         
           setProject(res.data)
+          setVisible(2)
           console.log(res.data)  
       })
   }, [])
 
-// const quickSort = () => {
-//     if (project == null) return []
-    
-//     let pivot  = project_address[0], left = [], right 
-// }
 
+
+  // const quickSort = houseName => {
+  //     console.log(houseName)
+  //   if (houseName.length < 2) 
+    
+  //   return houseName;
+    
+   
+  //   let pivot = houseName[0];
+  //   let left  = []; 
+  //   let right = [];
+  //   for (let i = 1 , total = houseName.length ; i < total; i++){
+  //     console.log(houseName.length)
+  //     if (houseName[i].suburb < pivot.suburb) 
+  //       left.push(houseName[i]);
+  //      else 
+  //       right.push(houseName[i]); 
+  //   }
+  //    setProject( [
+  //     ...quickSort(left), 
+  //     pivot, 
+  //     ...quickSort(right)
+
+  //   ]);
+
+  // };
+
+  const quicksort = (list) => {
+    if (list.length < 2) {
+        return list
+    }
+
+    let pivot = list[0]
+    let left = []
+    let right = []
+
+    for (let i = 1; i < list.length; i ++) {
+        if (list[i].suburb < pivot.suburb) {
+            left.push(list[i])
+        } else {
+            right.push(list[i])
+        }
+    }
+
+   return [...quicksort(left), pivot, ...quicksort(right)]
+}
 
  
   let pet = {
@@ -50,7 +90,7 @@ function Listing() {
                     <option value="-1">Sort by: Featured first</option>
                 </select>
                 
-                <button id='filter-button'><div id='filter-text'>Filter</div> <img src={Panel} alt='' /></button>
+                <button id='filter-button' onClick={() => setProject (quicksort(project))}><div id='filter-text'>Filter</div> <img src={Panel} alt='' /></button>
                 
                 
             </div>
@@ -63,6 +103,16 @@ function Listing() {
         <div>
             
             <div className='card-container'>
+         
+        {visible === 1 &&
+         <div className='no-listing'>   
+            <div id='no-listing-text'>We’re sorry.
+We couldn't find anything matching your search. You could broaden your search by removing some refinements.
+            </div>
+            <Link to={'/'}>
+            <button id='listing-booknow'>Return to Search</button>
+            </Link>
+          </div>}
                 
                 {project.map((ele, index) => (
                     <Link to={ `/booking/${ele.listing_id}`}>
