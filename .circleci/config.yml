@@ -36,7 +36,7 @@ jobs:
       - attach_workspace:
           at: .
       - checkout
-      - run: aws s3 sync ./app/build s3://mission04bucket-v2
+      - run: aws s3 sync ./app/build s3://mission06
 
 workflows:
   build_test_deploy:

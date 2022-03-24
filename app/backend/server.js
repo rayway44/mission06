@@ -57,13 +57,13 @@ router.get('/',(req,res) => {
             })
 })
 
-
-
+router.get('/test',(req,res) => {
+    res.send('have hit test end point')
+})
 
 // Backend API from LandingPage <<<<    
-router.get('/listing/:property/:suburb/:rent/:bedroom/:bathroom', (req, res) => {
+router.get('/booking/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker', (req, res) => {
     
-
             const property = req.params.property
             
             const suburb = req.params.suburb
@@ -71,20 +71,27 @@ router.get('/listing/:property/:suburb/:rent/:bedroom/:bathroom', (req, res) => 
             const bedroom = req.params.bedroom
             const bathroom = req.params.bathroom
             
-          const bedroomHolder =  parseInt(bedroom)
-          const bathroomHolder = parseInt(bathroom)
-            
-            console.log(property, suburb, rent, bedroom, bathroom)
+            console.log(query)
+            // {property_type: Apartment ,city: {$lte:city},suburb: suburb,price:{$lte:rent}}
+                    
+                    if(property === 'All'){
 
-                    documentPull.find({property_type: property ,price:{$eq:rent }, suburb: suburb, bedroom_count: bedroomHolder, bathroom_count: bathroomHolder})
-                    .then((result) => {
-                        console.log(result)
-                        res.send(result)
-                    })
-                    .catch(err => { 
-                        console.log(err)
-                    })
-
+                        documentPull.find({})
+                        .then((result) => {
+                            // console.log(result)
+                            res.send(result)
+                        })
+                    }  else {
+                        documentPull.find({property_type: property ,city: city,suburb: suburb,price:{$lte:rent}})
+                        .then((result) => {
+                            // console.log(result)
+                            res.send(result)
+                        })
+                        .catch(err => { 
+                            console.log(err)
+                        })
+                    }
+                    
 })
 
 // Postman Testing endpoint
@@ -119,42 +126,7 @@ app.get('/hit',(req,res) => {
 
 // SEARCH: Here is where you can write your SEARCH QUERIES
 router.get('/find',  (req,res) => {
-    // documentPull.find({}).limit(10)
-    // .then((result)) => {
-    //     res.send(result)
-    // } 
-    // const quickSort = array => {
-      
-    //     if (array.length < 2) 
-        
-    //     return array;
-    
-    //     // console.log(array.length)
-        
-    //     let pivot = array[0];
-    //     let left  = []; 
-    //     let right = [];
-    //     console.log(pivot)
-    //     for (let i = 1 , total = array.length ; i < total; i++){
-    //       if (array[i] < pivot) 
-    //         left.push(array[i]);
-    //        else 
-    //         right.push(array[i]); 
-    //     }
-    //     return  [
-    //       ...quickSort(left), 
-    //       pivot, 
-    //       ...quickSort(right)
-    
-    //     ];
-        
-    //   };
-
-    
-      
-       
-    // const result = quicksort(filteredData) 
-    // res.send(result) 
+   
     documentPull.find({}).limit(3)
     .then(result => {
         res.send((result))
@@ -181,9 +153,5 @@ router.get('/find/:listing_id',(req,res) => {
 
 
 })
-
-// app.listen(`${port}`, () => {
-//     console.log(`you are listening on port ${port}`)
-// })
 
 module.exports = router

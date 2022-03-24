@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import './Listing.css'
 import {useState, useEffect} from 'react'
+import {useLocation} from 'react-router-dom'
 
 import Dogpaw from './dogpaw.png'
 import Bedroom from './Bedroom.png'
@@ -17,7 +18,7 @@ function Listing() {
   const [visible, setVisible] = useState(1);
 
   useEffect(() => {
-      axios.get(`http://localhost:5000/find`)
+      axios.get(querySearch)
       .then(res => {
          
           setProject(res.data)
@@ -25,34 +26,35 @@ function Listing() {
           console.log(res.data)  
       })
   }, [])
+    console.log('LISTINGS PAGE HIT')
 
 
+    // grabs search params from URL
+    const {search} = useLocation()
+    const searchParams = new URLSearchParams(search)
 
-  // const quickSort = houseName => {
-  //     console.log(houseName)
-  //   if (houseName.length < 2) 
-    
-  //   return houseName;
-    
-   
-  //   let pivot = houseName[0];
-  //   let left  = []; 
-  //   let right = [];
-  //   for (let i = 1 , total = houseName.length ; i < total; i++){
-  //     console.log(houseName.length)
-  //     if (houseName[i].suburb < pivot.suburb) 
-  //       left.push(houseName[i]);
-  //      else 
-  //       right.push(houseName[i]); 
-  //   }
-  //    setProject( [
-  //     ...quickSort(left), 
-  //     pivot, 
-  //     ...quickSort(right)
+    const property = searchParams.get('property')
+    const city = searchParams.get('city')
+    const suburb = searchParams.get('suburb')
+    const rent = searchParams.get('rent')
+    const bedroom = searchParams.get('bedroom')
+    const bathroom = searchParams.get('bathroom')
+    const pet = searchParams.get('pet')
+    const smoker = searchParams.get('smoker')
 
-  //   ]);
 
-  // };
+    console.log(`
+    - property: ${property} 
+    - city: ${city} 
+    - price: ${rent}
+    - bed: ${bedroom}
+    - bathroom: ${bathroom}
+    - suburb: ${suburb}
+    - smoker: ${smoker}
+    - pet: ${pet}`)
+
+    // const query = name + age 
+    const querySearch = `http://localhost:5000/booking/${property}/${city}/${suburb}/${rent}/${bedroom}/${bathroom}/${pet}/${smoker}`
 
   const quicksort = (list) => {
     if (list.length < 2) {
@@ -74,11 +76,9 @@ function Listing() {
    return [...quicksort(left), pivot, ...quicksort(right)]
 }
 
- 
-  let pet = {
+  let dog = {
       1: <div id='pets'> <img src={Dogpaw} alt=''/> Pet Friendly </div>
   }
-
 
   return (
     <div>
@@ -129,7 +129,7 @@ We couldn't find anything matching your search. You could broaden your search by
                                 <div className='card-info'>
                             
                                     <div id='com-events'><img src={Bbq} alt=''/>There are community events</div>
-                                    <div >{pet[ele.pet_friendly]}</div>
+                                    <div >{dog[ele.pet_friendly]}</div>
 
                                     <div id='price'>$ {ele.price} /pw</div>
                                 
