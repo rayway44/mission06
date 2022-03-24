@@ -13,21 +13,7 @@ import Panel from './panel.png'
 import {Link} from 'react-router-dom'
 
 function Listing() {
-
-  const [project, setProject] = useState([])
-  const [visible, setVisible] = useState(1);
-
-  useEffect(() => {
-      axios.get(querySearch)
-      .then(res => {
-         
-          setProject(res.data)
-          setVisible(2)
-          console.log(res.data)  
-      })
-  }, [])
     console.log('LISTINGS PAGE HIT')
-
 
     // grabs search params from URL
     const {search} = useLocation()
@@ -54,7 +40,20 @@ function Listing() {
     - pet: ${pet}`)
 
     // const query = name + age 
-    const querySearch = `http://localhost:5000/booking/${property}/${city}/${suburb}/${rent}/${bedroom}/${bathroom}/${pet}/${smoker}`
+    const querySearch = `http://localhost:5000/listing/${property}/${city}/${suburb}/${rent}/${bedroom}/${bathroom}/${pet}/${smoker}`
+
+    const [project, setProject] = useState([])
+    const [visible, setVisible] = useState(1);
+  
+    useEffect(() => {
+        axios.get(querySearch)
+        .then(res => {
+           
+            setProject(res.data)
+            setVisible(2)
+            console.log(res.data)  
+        })
+    }, [])
 
   const quicksort = (list) => {
     if (list.length < 2) {

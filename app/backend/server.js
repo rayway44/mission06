@@ -62,7 +62,7 @@ router.get('/test',(req,res) => {
 })
 
 // Backend API from LandingPage <<<<    
-router.get('/booking/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker', (req, res) => {
+router.get('/listing/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smoker', (req, res) => {
     
             const property = req.params.property
             
@@ -70,9 +70,6 @@ router.get('/booking/:property/:city/:suburb/:rent/:bedroom/:bathroom/:pet/:smok
             const rent = req.params.rent
             const bedroom = req.params.bedroom
             const bathroom = req.params.bathroom
-            
-            console.log(query)
-            // {property_type: Apartment ,city: {$lte:city},suburb: suburb,price:{$lte:rent}}
                     
                     if(property === 'All'){
 
