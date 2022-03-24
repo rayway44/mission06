@@ -75,7 +75,7 @@ import {
     const markers = [
       {
         id: 1,
-        name: [<span className='info-styling'><img src={propOneImg}/><br/>
+        name: [<span className='info-styling'><img src={propOneImg} alt=''/><br/>
         <span className='info-window-title'>{propOne}</span><br/><br/>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel purus dolor. Donec eget nisl nec metus euismod ullamcorper. Pellentesque blandit leo eros, eu convallis quam faucibus sit amet. Etiam viverra tincidunt lacinia.</span>
         </span>],
@@ -88,7 +88,7 @@ import {
       },  
       {
         id: 2,
-        name: [<span className='info-styling'><img src={propTwoImg}/><br/>
+        name: [<span className='info-styling'><img src={propTwoImg} alt=''/><br/>
         <span className='info-window-title'>{propTwo}</span><br/><br/>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel purus dolor. Donec eget nisl nec metus euismod ullamcorper. Pellentesque blandit leo eros, eu convallis quam faucibus sit amet. Etiam viverra tincidunt lacinia.</span>
         </span>],
@@ -101,7 +101,7 @@ import {
       },  
       {
         id: 3,
-        name: [<span className='info-styling'><img src={propThreeImg}/><br/><br/>
+        name: [<span className='info-styling'><img src={propThreeImg} alt=''/><br/><br/>
         <span className='info-window-title'>{propThree}</span><br/><br/>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel purus dolor. Donec eget nisl nec metus euismod ullamcorper. Pellentesque blandit leo eros, eu convallis quam faucibus sit amet. Etiam viverra tincidunt lacinia.</span>
         </span>],
@@ -114,7 +114,7 @@ import {
       },  
       {
         id: 4,
-        name: [<span className='info-styling'><img src={propThreeImg}/><br/><br/>
+        name: [<span className='info-styling'><img src={propThreeImg} alt=''/><br/><br/>
         <span className='info-window-title'>{propThree}</span><br/><br/>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel purus dolor. Donec eget nisl nec metus euismod ullamcorper. Pellentesque blandit leo eros, eu convallis quam faucibus sit amet. Etiam viverra tincidunt lacinia.</span>
         </span>],
@@ -127,7 +127,7 @@ import {
       },  
       {
         id: 5,
-        name: [<span className='info-styling'><img src={propThreeImg}/><br/><br/>
+        name: [<span className='info-styling'><img src={propThreeImg} alt=''/><br/><br/>
         <span className='info-window-title'>{propThree}</span><br/><br/>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel purus dolor. Donec eget nisl nec metus euismod ullamcorper. Pellentesque blandit leo eros, eu convallis quam faucibus sit amet. Etiam viverra tincidunt lacinia.</span>
         </span>],
@@ -140,7 +140,7 @@ import {
       },  
       {
         id: 6,
-        name: [<span className='info-styling'><img src={propThreeImg}/><br/><br/>
+        name: [<span className='info-styling'><img src={propThreeImg} alt=''/><br/><br/>
         <span className='info-window-title'>{propThree}</span><br/><br/>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel purus dolor. Donec eget nisl nec metus euismod ullamcorper. Pellentesque blandit leo eros, eu convallis quam faucibus sit amet. Etiam viverra tincidunt lacinia.</span>
         </span>],
@@ -153,7 +153,7 @@ import {
       },  
       {
         id: 7,
-        name: [<span className='info-styling'><img src={propThreeImg}/><br/><br/>
+        name: [<span className='info-styling'><img src={propThreeImg} alt=''/><br/><br/>
         <span className='info-window-title'>{propThree}</span><br/><br/>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel purus dolor. Donec eget nisl nec metus euismod ullamcorper. Pellentesque blandit leo eros, eu convallis quam faucibus sit amet. Etiam viverra tincidunt lacinia.</span>
         </span>],
@@ -166,7 +166,7 @@ import {
       },  
       {
         id: 8,
-        name: [<span className='info-styling'><img src={propThreeImg}/><br/><br/>
+        name: [<span className='info-styling'><img src={propThreeImg} alt=''/><br/><br/>
         <span className='info-window-title'>{propThree}</span><br/><br/>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel purus dolor. Donec eget nisl nec metus euismod ullamcorper. Pellentesque blandit leo eros, eu convallis quam faucibus sit amet. Etiam viverra tincidunt lacinia.</span>
         </span>],
@@ -179,7 +179,7 @@ import {
       },  
       {
         id: 8,
-        name: [<span className='info-styling'><img src={propThreeImg}/><br/><br/>
+        name: [<span className='info-styling'><img src={propThreeImg} alt=''/><br/><br/>
         <span className='info-window-title'>{propThree}</span><br/><br/>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel purus dolor. Donec eget nisl nec metus euismod ullamcorper. Pellentesque blandit leo eros, eu convallis quam faucibus sit amet. Etiam viverra tincidunt lacinia.</span>
         </span>],
@@ -192,7 +192,7 @@ import {
       },  
       {
         id: 9,
-        name: [<span className='info-styling'><img src={propThreeImg}/><br/><br/>
+        name: [<span className='info-styling'><img src={propThreeImg} alt=''/><br/><br/>
         <span className='info-window-title'>{propThree}</span><br/><br/>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel purus dolor. Donec eget nisl nec metus euismod ullamcorper. Pellentesque blandit leo eros, eu convallis quam faucibus sit amet. Etiam viverra tincidunt lacinia.</span>
         </span>],
