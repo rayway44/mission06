@@ -57,8 +57,11 @@ router.get('/',(req,res) => {
             })
 })
 
-router.get('/test',(req,res) => {
-    res.send('have hit test end point')
+router.get('/load',(req,res) => {
+
+    const text = 'test test'
+    res.send(text)
+    console.log(text)
 })
 
 // Backend API from LandingPage <<<<    
