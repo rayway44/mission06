@@ -8,12 +8,12 @@ jobs:
       - checkout
       - run:
           name: Installing AWS CLI
+          no_output_timeout: 30m
           command: |
             sudo apt-get update
             sudo apt install python3-pip
             sudo pip3 install awsebcli --upgrade
-      - run: cd ./app && npm install && npm run build
-      - run: cd ./app/backend && npm install && npm start
+      - run: cd ./app/backend && npm install && npm start && cd ../ && npm install && npm run build
       - persist_to_workspace:
           root: .
           paths:
